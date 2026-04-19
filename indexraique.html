@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Prof. Raique Lucas de Jesus Correia · UNIFACS · Faculdade de Direito</title>
+    <!-- Fontes padronizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f9fc;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #1e2f3d;
+            line-height: 1.5;
+        }
+
+        .page-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        /* cabeçalho */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: #9b2e2a;
+        }
+
+        .photo-frame {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid #ffffff;
+            outline: 1px solid #e2e8f0;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-fallback {
+            text-align: center;
+            color: #9aaebf;
+            font-size: 0.8rem;
+        }
+        .photo-fallback i {
+            font-size: 3rem;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a3a4a;
+            letter-spacing: -0.2px;
+            margin-bottom: 0.3rem;
+        }
+        .hero-subtitle {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #9b2e2a;
+            border-left: 3px solid #9b2e2a;
+            padding-left: 1rem;
+            margin: 0.4rem 0 0.4rem 0;
+        }
+        .appointments {
+            font-size: 0.85rem;
+            color: #4a627a;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+        .appointments i {
+            width: 1.6rem;
+            color: #9b2e2a;
+            font-size: 0.85rem;
+        }
+        .contact-row {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+        .contact-row a {
+            color: #2c6280;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        .contact-row a:hover {
+            color: #9b2e2a;
+            border-bottom-color: #9b2e2a;
+        }
+
+        /* grid */
+        .two-col-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        /* cards */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #eef2f6;
+        }
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a4a5a;
+            margin-bottom: 1rem;
+            border-left: 4px solid #9b2e2a;
+            padding-left: 1rem;
+        }
+        .bio-text {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: #2d445b;
+            text-align: justify;
+        }
+
+        /* publicações */
+        .pub-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #f0f3f8;
+            padding-bottom: 0.8rem;
+        }
+        .pub-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: #1c4b6e;
+        }
+        .pub-authors {
+            font-size: 0.78rem;
+            color: #6f8eaa;
+            margin-top: 0.2rem;
+        }
+        .pub-journal {
+            font-size: 0.74rem;
+            font-style: italic;
+            color: #b1946c;
+        }
+        .pub-tag {
+            display: inline-block;
+            font-size: 0.62rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+            background: #eef2fa;
+            color: #2c6280;
+        }
+        .index-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            margin-left: 0.4rem;
+            background: #e6f0ea;
+            color: #2d6a4f;
+        }
+
+        /* projetos */
+        .project-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #f0f3f8;
+            font-size: 0.85rem;
+        }
+        .project-item strong {
+            font-size: 0.88rem;
+            color: #1c4b6e;
+        }
+        .project-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            margin-right: 0.6rem;
+            background: #eef2fa;
+            color: #2c6280;
+        }
+
+        .teaching-item {
+            margin-bottom: 0.8rem;
+            font-size: 0.88rem;
+        }
+        .teaching-item i {
+            width: 1.6rem;
+            color: #9b2e2a;
+            font-size: 0.9rem;
+        }
+        .btn-scholar {
+            display: inline-block;
+            margin-top: 0.8rem;
+            background: #1c4b6e;
+            color: white;
+            padding: 0.45rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-scholar i {
+            margin-right: 0.4rem;
+        }
+        .btn-scholar:hover {
+            background: #9b2e2a;
+        }
+
+        /* sidebar */
+        .sidebar-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #eef2f6;
+        }
+        .sidebar-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1a4a5a;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eaeff5;
+            padding-bottom: 0.4rem;
+        }
+
+        /* timeline sem linha vertical - apenas bolinhas */
+        .timeline {
+            position: relative;
+            padding-left: 0;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.2rem;
+            padding-left: 1.8rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.3rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #9b2e2a;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #9b2e2a;
+        }
+        .timeline-degree {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: #1c4b6e;
+        }
+        .timeline-institution {
+            font-size: 0.78rem;
+            color: #6f8eaa;
+            margin: 0.2rem 0;
+        }
+        .timeline-details {
+            font-size: 0.74rem;
+            color: #5a6e82;
+            margin-top: 0.2rem;
+        }
+
+        .interest-tag {
+            background: #f0f4fa;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin: 0.2rem 0.2rem;
+            color: #2c6280;
+            border: 1px solid #e2eaf2;
+        }
+
+        .advisor-card {
+            background: #fafcfd;
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #9b2e2a;
+        }
+        .advisor-name {
+            font-weight: 700;
+            color: #1c4b6e;
+            font-size: 0.85rem;
+        }
+
+        .research-group-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 0.9rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid #e8edf3;
+            transition: all 0.2s;
+        }
+        .research-group-card:hover {
+            border-color: #9b2e2a;
+            background: #ffffff;
+        }
+        .research-group-title {
+            font-weight: 700;
+            color: #1c4b6e;
+            font-size: 0.85rem;
+        }
+        .research-group-detail {
+            font-size: 0.75rem;
+            color: #6f8eaa;
+            margin-top: 0.2rem;
+        }
+
+        .prize-item {
+            font-size: 0.78rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #eef2f8;
+            color: #3c5a73;
+        }
+        .prize-item strong {
+            color: #1c4b6e;
+        }
+
+        .complement-item {
+            font-size: 0.76rem;
+            margin-bottom: 0.6rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #9b2e2a;
+            color: #4a6579;
+        }
+
+        .edu-meta {
+            font-size: 0.76rem;
+            color: #6f8eaa;
+            line-height: 1.4;
+        }
+        .footer-note {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #8aa0b5;
+            border-top: 1px solid #e4ecf3;
+            padding-top: 2rem;
+        }
+        .social-links {
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .social-links a {
+            color: #8aa0b5;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #9b2e2a;
+        }
+
+        @media (max-width: 850px) {
+            .two-col-layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                text-align: center;
+            }
+            .contact-row {
+                justify-content: center;
+            }
+            .hero-section::after {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+            }
+            .card, .sidebar-card {
+                padding: 1.2rem;
+            }
+        }
+/* Estilo de destaque para o Doutorado Sanduíche (sem linha, com fundo e ícone) */
+.sandwich-highlight {
+    display: flex;
+    gap: 0.8rem;
+    background: #fff8f0;
+    border-left: 3px solid #9b2e2a;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.3rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.sandwich-highlight:hover {
+    background: #fff5ea;
+    border-left-color: #c97a77;
+}
+
+.sandwich-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #9b2e2a10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b2e2a;
+    font-size: 1rem;
+}
+
+.sandwich-content {
+    flex: 1;
+}
+
+.sandwich-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #9b2e2a;
+    letter-spacing: -0.2px;
+    margin-bottom: 0.2rem;
+}
+
+.sandwich-institution {
+    font-size: 0.74rem;
+    color: #5a6e82;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+.sandwich-detail {
+    font-size: 0.71rem;
+    color: #7a95af;
+    line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- cabeçalho -->
+    <div class="hero-section">
+        <div class="photo-frame" id="photoFrame">
+            <img src="https://0.academia-photos.com/98733907/21525196/185633193/s200_raique_lucas_de_jesus.correia.jpg" 
+                 alt="Prof. Raique Lucas de Jesus Correia" 
+                 id="profileImg"
+                 onerror="this.onerror=null; this.style.display='none'; document.getElementById('fallbackContent').style.display='flex';">
+            <div id="fallbackContent" style="display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; width:100%; height:100%;">
+                <i class="fas fa-user-graduate fa-3x" style="color:#9aaebf;"></i>
+                <span style="font-size:0.8rem; margin-top:0.3rem; color:#6f8eaa;">Raique L. Correia</span>
+            </div>
+        </div>
+        <div class="hero-text">
+            <h1>Raique Lucas de Jesus Correia</h1>
+            <div class="hero-subtitle">Professor da Faculdade de Direito da Universidade Salvador (UNIFACS) · Brasil</div>
+<div class="hero-subtitle">Advogado inscrito na Ordem dos Advogados do Brasil - Seccional Bahia (OAB/BA) · Brasil</div>
+            <div class="appointments">
+                <i class="fas fa-graduation-cap"></i> Doutorando e Mestre em Desenvolvimento Regional e Urbano · Universidade Salvador (UNIFACS) · Brasil<br>
+                <i class="fas fa-landmark"></i> Especialista em Políticas Públicas e Patrimônio Cultural · Universidade Federal da Bahia (UFBA) · Brasil<br>
+                <i class="fas fa-balance-scale"></i> Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH) · Brasil<br>
+                <i class="fas fa-users"></i> Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania - GPPEC/UNIFACS/CNPq · Brasil<br>
+                <i class="fas fa-globe-americas"></i> Pesquisador Colaborador · Instituto Jurídico Portucalense, Universidade Portucalense Infante D. Henrique (UPT) · Portugal<br>
+                <i class="fas fa-globe-americas"></i> Pesquisador Visitante · Facultad de Derecho, Universidad de Ixtlahuaca · México (2024-2025)
+            </div>
+            <div class="contact-row">
+                <a href="#" id="emailNew"><i class="far fa-envelope"></i> raique.correia@ulife.com.br</a>
+                <a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i> Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Raique-Correia" target="_blank" rel="noopener noreferrer"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                <a href="https://unifica.academia.edu/RaiqueLucasdeJesusCorreia" target="_blank" rel="noopener noreferrer"><i class="fas fa-university"></i> Academia.edu</a>
+                <a href="http://dgp.cnpq.br/dgp/espelhorh/0200473611" target="_blank" rel="noopener noreferrer"><i class="fas fa-users"></i> GPPEC/CNPq</a>
+                <a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer"><i class="fas fa-scroll"></i> Currículo Lattes</a>
+                <a href="https://orcid.org/0000-0002-0488-3037" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
+                <a href="https://www.cienciavitae.pt/portal/E112-D7F1-7DD6" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> CIÊNCIAVITAE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- grid principal -->
+    <div class="two-col-layout">
+        <!-- coluna esquerda -->
+        <div>
+            <div class="card">
+                <h2>Biografia</h2>
+                <div class="bio-text">
+                    Advogado, professor e pesquisador. Doutorando em Desenvolvimento Regional e Urbano pela Universidade Salvador (UNIFACS), com bolsa da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Entre junho de 2025 e maio de 2026, realizou Doutorado Sanduíche na Universidad de Ixtlahuaca CUI (México), com bolsa do Programa de Doutorado Sanduíche no Exterior (PDSE/CAPES). Entre fevereiro e março de 2026, realizou Visiting Professor no Instituto de Formación Académica del Centro y Sureste - UNIVERSIDAD INFA (México). Mestre em Desenvolvimento Regional e Urbano pela UNIFACS. Especialista em Políticas Públicas e Patrimônio Cultural pela Universidade Federal da Bahia (UFBA). Bacharel em Direito pelo Centro Universitário Social da Bahia (UNISBA). Atua como professor da graduação em Direito da UNIFACS. Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH). Secretário Editorial da RDE - Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) da UNIFACS. Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq) e membro do Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq). Pesquisador colaborador em projeto vinculado ao Instituto Jurídico Portucalense (IJP) da Universidade Portucalense Infante D. Henrique (UPT, Portugal). Coordenou, em parceria com o Prof. Dr. José Euclimar Xavier de Menezes, o dossiê "Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade", publicado na CSOnline - Revista Eletrônica de Ciências Sociais (ISSN 1981-2140, Qualis B1), vinculada ao Programa de Pós-Graduação em Ciências Sociais (PPGCSO) da Universidade Federal de Juiz de Fora (UFJF). Foi roteirista e autor do argumento do documentário "Projeto CienciArt V - A Cidade pelo Avesso" (ANCINE CPB n. B25-002217-00000), produção do GPPEC/UNIFACS com financiamento público da Lei Paulo Gustavo (Lei Complementar n. 195/2022), conforme Edital PG02/2023 Produção Audiovisual Web da Secretaria de Cultura do Estado da Bahia (SECULT-BA).
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Publicações Selecionadas</h2>
+                <!-- Artigos em ordem cronológica decrescente (mais recente primeiro) -->
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <span class="index-tag"><i class="fas fa-globe"></i> SCOPUS · Web of Science</span>
+                    <div class="pub-title">O direito à cidade achado na rua: fundamentos teóricos e perspectivas epistemológicas</div>
+                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
+                    <div class="pub-journal">Revista Jurídica Portucalense, vol.2, pp. 154–184, 2026</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <span class="index-tag"><i class="fab fa-wikipedia-w"></i> Web of Science</span>
+                    <div class="pub-title">O 'direito achado na rua' e os novos 'sujeitos coletivos de direito': a luta social como paradigma do direito à cidade</div>
+                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
+                    <div class="pub-journal">Direito da Cidade (UERJ), v.17, pp. 282–310, 2025</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <div class="pub-title">Os direitos humanos na perspectiva crítica de 'o direito achado na rua'</div>
+                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
+                    <div class="pub-journal">Revista do Instituto Brasileiro de Direitos Humanos, v.24/25, pp. 171–192, 2025</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <span class="index-tag"><i class="fab fa-wikipedia-w"></i> Web of Science</span>
+                    <div class="pub-title">A cidade e o cidadão: por uma abordagem político-territorial do conceito de cidadania a partir de uma perspectiva emancipatória</div>
+                    <div class="pub-authors">Correia, R. L. J.; Oliveira Filho, W. A.; Menezes, J. E. X.</div>
+                    <div class="pub-journal">Revista Geografares (UFES), v.4, pp. 1–40, 2024</div>
+                    <div class="pub-authors" style="margin-top: 0.2rem;"><em>Versão em inglês: The city and the citizen: for a political-territorial approach to the concept of citizenship from an emancipatory perspective (same journal)</em></div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <div class="pub-title">Movimentos sociais urbanos e cidadanias periféricas insurgentes. A luta dos moradores do Calabar (Salvador, BA) pelo direito à cidade</div>
+                    <div class="pub-authors">Correia, R. L. J.; Souza, G. B. G.; Menezes, J. E. X.</div>
+                    <div class="pub-journal">Revista Cidades, v.15, pp. 112–152, 2023</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <div class="pub-title">Os caminhos incertos do 'Direito e Literatura': perspectivas e potencialidades</div>
+                    <div class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.</div>
+                    <div class="pub-journal">Anamorphosis - Revista Internacional de Direito e Literatura, v.8, p.1-33, 2022</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
+                    <div class="pub-title">Habermas and the issue of religion in the public space: critical contributions to a new view on State laicity</div>
+                    <div class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.; Ferreira, F. B.</div>
+                    <div class="pub-journal">Revista da Faculdade de Direito do Sul de Minas, v.37, p.215-238, 2021</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-book"></i> LIVRO</span>
+                    <div class="pub-title">Direito, literatura & sertão: perspectivas decoloniais a partir do Romance d'A Pedra do Reino de Ariano Suassuna</div>
+                    <div class="pub-authors">Correia, R. L. J.</div>
+                    <div class="pub-journal">Editora Porta, 344p, 2022. ISBN 9786599907357</div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-tag"><i class="fas fa-book"></i> COLETÂNIA</span>
+                    <div class="pub-title">Diálogos interdisciplinares entre direitos humanos, filosofia & psicanálise: antologia em homenagem aos 30 anos de docência universitária do professor José Euclimar Xavier de Menezes</div>
+                    <div class="pub-authors">Correia, R. L. J. (Org.); Ferreira, L. E. S. (Org.); Barreto Junior, W. D. (Org.)</div>
+                    <div class="pub-journal">Editora Porta, João Pessoa, 2025, v.1, 356p. ISBN 9786585633314</div>
+                </div>
+                <a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" class="btn-scholar"><i class="fab fa-google"></i> Todos os artigos no Google Scholar</a>
+            </div>
+
+            <div class="card">
+                <h2>Projetos de Pesquisa e Extensão</h2>
+                <div class="project-item">
+                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
+                    <strong>Movimientos sociales insurgentes y prácticas contrahegemónicas en la producción del espacio urbano</strong><br>
+                    <strong>Instituições:</strong> UNIFACS (Brasil) · Universidad de Ixtlahuaca CUI (México)<br>
+                    <strong>Período:</strong> 2024-2025 · <strong>Financiamento:</strong> CAPES/PDSE<br>
+                    O projeto tem como objetivo comparar os impactos da atuação de movimentos sociais insurgentes em Salvador (Brasil) e Toluca (México) na articulação de práticas contra-hegemônicas de produção do espaço urbano e na efetivação da cidadania a partir da luta pelo direito à cidade, no período de 1970 a 2025.
+                </div>
+                <div class="project-item">
+                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
+                    <strong>Indicadores de Cidadania e Políticas Públicas</strong><br>
+                    <strong>Instituições:</strong> UNIFACS · Ministério Público da Bahia · UPT (Portugal) · USAL (Espanha)<br>
+                    <strong>Período:</strong> 2021-2022<br>
+                    Investigação sobre novas demandas e conflitos envolvendo práticas políticas em direitos humanos na contemporaneidade, com ênfase em violações em contextos de vulnerabilidade, relações de gênero, violência policial, desigualdades regionais e socioeconômicas.
+                </div>
+                <div class="project-item">
+                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
+                    <strong>Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade</strong><br>
+                    <strong>Instituições:</strong> Universidade Portucalense (UPT) · Instituto Jurídico Portucalense (IJP)<br>
+                    <strong>Período:</strong> 2023-2024<br>
+                    Investigação sobre a materialização dos direitos humanos na cidade e na prisão, dois espaços fundamentais onde tais direitos são experimentados, garantidos ou violados, com especial atenção às periferias urbanas e sua relação com a densidade demográfica do sistema prisional.
+                </div>
+                <div class="project-item">
+                    <span class="project-tag"><i class="fas fa-film"></i> EXTENSÃO</span>
+                    <strong>Projeto CienciArt V - A Cidade pelo Avesso</strong><br>
+                    <strong>Instituição:</strong> GPPEC/UNIFACS · <strong>Financiamento:</strong> SECULT-BA (Lei Paulo Gustavo)<br>
+                    Documentário que coloca em evidência as vozes silenciadas das periferias urbanas, revelando formas criativas e inspiradoras com que os sujeitos periféricos recriam o espaço por meio de estratégias de resistência cultural, manifestações simbólicas e criação artística.
+                </div>
+                <div class="project-item">
+                    <span class="project-tag"><i class="fas fa-hands-helping"></i> EXTENSÃO</span>
+                    <strong>Favela em Movimento: Experiências Populares Emancipatórias e Práticas Políticas de Cidadania em Territórios Periféricos</strong><br>
+                    <strong>Instituição:</strong> UNIFACS · GPPEC<br>
+                    <strong>Período:</strong> 2023-2024<br>
+                    Projeto que perscruta investigar, a partir da inserção no bairro do Calabar (Salvador-BA), como a experiência dos movimentos sociais e sujeitos coletivos contribuem para a promoção de novas práticas de cidadania e efetivação de direitos à luz do programa teórico-metodológico de "O Direito Achado na Rua".
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Docência e Internacionalização</h2>
+                <div class="teaching-item">
+                    <i class="fas fa-chalkboard-teacher"></i> <strong>Professor do Curso de Direito da UNIFACS</strong><br>
+                    <strong>Grande Área:</strong> Direito Público<br>
+                    <strong>Disciplinas Específicas:</strong> Teoria Geral do Direito; Filosofia Jurídica; Direito Constitucional; Ciências Políticas e Teoria do Estado; Direitos Humanos; Metodologia da Pesquisa Científica.
+                </div>
+                <div class="teaching-item" style="margin-top: 1rem;">
+                    <i class="fas fa-user-graduate"></i> <strong>Orientador de Iniciação Científica (PIBIC/UNIFACS)</strong><br>
+                    Projeto: <em>"O Direito Achado nas Periferias: Práticas Jurídicas Emancipatórias e Construção da Cidadania em Territórios Marginalizados"</em>
+                </div>
+                <div class="teaching-item" style="margin-top: 1rem;">
+                    <i class="fas fa-globe-americas"></i> <strong>Estância de Pesquisa (Research Stay)</strong><br>
+                    Universidad de Ixtlahuaca CUI (México) · junho de 2024 a maio de 2025 · CAPES/PDSE
+                </div>
+                <div class="teaching-item" style="margin-top: 0.5rem;">
+                    <i class="fas fa-globe-americas"></i> <strong>Visiting Professor</strong><br>
+                    Instituto de Formación Académica del Centro y Sureste - UNIVERSIDAD INFA (México) · fevereiro-março 2026
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Comissões Organizadoras de Congressos Internacionais</h2>
+                <div class="teaching-item">
+                    <i class="fas fa-calendar-alt"></i> <strong>Simpósios Internacionais em Direitos Humanos e Cidadania</strong><br>
+                    Universidade Portucalense Infante D. Henrique (UPT) · Portugal
+                </div>
+                <div class="teaching-item" style="margin-top: 0.8rem;">
+                    <i class="fas fa-calendar-alt"></i> <strong>Simpósios Internacionais em Direitos Humanos Aplicados</strong><br>
+                    Universidad de Salamanca (USAL) · Espanha
+                </div>
+            </div>
+        </div>
+
+        <!-- coluna direita (sidebar) -->
+<div>
+    <div class="sidebar-card">
+        <h3>Formação Acadêmica</h3>
+        <div class="timeline">
+            <!-- Doutorado principal -->
+            <div class="timeline-item">
+                <div class="timeline-degree">Doutorado em Desenvolvimento Regional e Urbano</div>
+                <div class="timeline-institution">Universidade Salvador (UNIFACS) · Brasil · 2023–presente | CAPES/PROSUP</div>
+                <div class="timeline-details">
+                    Título: A Cidadania na Periferia do Capitalismo: Movimentos Sociais Insurgentes e Práticas Contra-Hegemônicas de Produção do Espaço Urbano em Favelas do Brasil e México<br>
+                    Orientador: Prof. Dr. José Euclimar Xavier de Menezes
+                </div>
+                
+                <!-- Doutorado Sanduíche como subitem de destaque (tipo "badge de honra") -->
+                <div class="sandwich-highlight">
+                    <div class="sandwich-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="sandwich-content">
+                        <div class="sandwich-title">Doutorado Sanduíche no Exterior</div>
+                        <div class="sandwich-institution">Universidad de Ixtlahuaca CUI · México · 2024-2025 | CAPES/PDSE</div>
+                        <div class="sandwich-detail">Coorientador: Prof. Dr. Roberto Félix Olivares Gutiérrez</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mestrado -->
+            <div class="timeline-item">
+                <div class="timeline-degree">Mestrado em Desenvolvimento Regional e Urbano</div>
+                <div class="timeline-institution">Universidade Salvador (UNIFACS) · Brasil · 2021–2023 | CAPES/PROSUP</div>
+                <div class="timeline-details">
+                    Título: Cidadania e Territorialidade Periférica: A Luta pelo Direito à Cidade na Comunidade do Calabar em Salvador, Bahia, Brasil<br>
+                    Orientador: Prof. Dr. José Euclimar Xavier de Menezes
+                </div>
+            </div>
+
+            <!-- Especialização -->
+            <div class="timeline-item">
+                <div class="timeline-degree">Especialização em Gestão Social e Políticas Públicas do Patrimônio Cultural</div>
+                <div class="timeline-institution">Universidade Federal da Bahia (UFBA) · Brasil · 2023–2025</div>
+                <div class="timeline-details">
+                    Título: Ariano Suassuna e a Indústria Cultural: Interfaces entre o Movimento Armorial e a Crítica Filosófica da Escola de Frankfurt<br>
+                    Orientadora: Profa. Dra. Daiane Batista de Jesus
+                </div>
+            </div>
+
+            <!-- Bacharelado -->
+            <div class="timeline-item">
+                <div class="timeline-degree">Bacharelado em Direito</div>
+                <div class="timeline-institution">Centro Universitário Social da Bahia (UNISBA) · Brasil · 2016–2020</div>
+                <div class="timeline-details">
+                    Título: Deus e o Diabo na Terra do Sol: Metáforas Decoloniais para uma Reflexão do Direito em A Pedra do Reino de Ariano Suassuna<br>
+                    Orientadora: Profa. Dra. Marta Regina Gama Gonçalves
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <div class="sidebar-card">
+                <h3>Áreas de Atuação</h3>
+                <div>
+                    <span class="interest-tag">Direitos Humanos e Cidadania</span>
+                    <span class="interest-tag">Garantias Fundamentais e Direito Constitucional</span>
+                    <span class="interest-tag">Direito Urbanístico e Direito à Cidade</span>
+                    <span class="interest-tag">Educação Jurídica</span>
+                    <span class="interest-tag">Direito e Arte</span>
+                    <span class="interest-tag">Direito e Literatura</span>
+                    <span class="interest-tag">Direitos Culturais e Patrimônio Cultural</span>
+                    <span class="interest-tag">Sociologia e Antropologia Jurídicas</span>
+                    <span class="interest-tag">Metodologia e Epistemologia das Ciências Jurídicas e Sociais</span>
+                    <span class="interest-tag">Teoria e Filosofia do Direito</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Orientação e Colaboradores</h3>
+                <div class="advisor-card">
+                    <span class="advisor-name">Orientador principal</span><br>
+                    Prof. Dr. José Euclimar Xavier de Menezes (UNIFACS)
+                </div>
+                <div class="advisor-card">
+                    <span class="advisor-name">Coorientador (México)</span><br>
+                    Prof. Dr. Roberto Félix Olivares Gutiérrez (UICUI)
+                </div>
+                <div class="advisor-card">
+                    <span class="advisor-name">Colaborador</span><br>
+                    Prof. Dr. José Geraldo de Sousa Junior (UnB)
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Grupos de Pesquisa</h3>
+                <div class="research-group-card">
+                    <div class="research-group-title"><i class="fas fa-users" style="margin-right: 0.5rem; color:#9b2e2a;"></i> Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC)</div>
+                    <div class="research-group-detail">Universidade Salvador (UNIFACS) · Vice-líder</div>
+                </div>
+                <div class="research-group-card">
+                    <div class="research-group-title"><i class="fas fa-gavel" style="margin-right: 0.5rem; color:#9b2e2a;"></i> Grupo de Pesquisa O Direito Achado na Rua (ODAnR)</div>
+                    <div class="research-group-detail">Universidade de Brasília (UnB) · Membro</div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Bolsas e Financiamentos</h3>
+                <div class="edu-meta"><i class="fas fa-check-circle" style="color: #9b2e2a;"></i> Bolsista CAPES/PROSUP (Mestrado e Doutorado)</div>
+                <div class="edu-meta" style="margin-top: 0.3rem;"><i class="fas fa-check-circle" style="color: #9b2e2a;"></i> Bolsista CAPES/PDSE – Doutorado Sanduíche no Exterior</div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Prêmios e Títulos</h3>
+                <div class="prize-item"><strong>2023</strong><br>1º Lugar - Concurso de Dissertação de Mestrado, Rede de Pesquisa em Direito da Cidade (VI Congresso Nacional de Direito da Cidade).</div>
+                <div class="prize-item"><strong>2019</strong><br>Prêmio de Melhor Apresentação no Formato Banner da XVII Semana Acadêmica do Centro Universitário Social da Bahia.</div>
+                <div class="prize-item"><strong>2018</strong><br>Projeto de Pesquisa de Destaque na XVI Jornada Científica da Faculdade Social da Bahia.</div>
+                <div class="prize-item"><strong>2017</strong><br>Projeto de Pesquisa de Destaque na XV Jornada Científica da Faculdade Social da Bahia.</div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Formação Complementar</h3>
+                <div class="complement-item">Aluno especial - PPGAU/FAUUSP (2021.2) - "Formação urbana e condicionantes da produção do espaço no Brasil"</div>
+                <div class="complement-item">Aluno especial - POSGEO/UFBA (2022.1) - "Cidade e Espaço Urbano"</div>
+                <div class="complement-item">Aluno extensionista - IPOL/UnB (2022.1) - "Direito à Cidade: Participação, Lutas Políticas e Democracia"</div>
+                <div class="complement-item">Grupo de Pesquisa em Direitos das Minorias (LAEJU-BA, 2021-2022)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <i class="far fa-copyright"></i> Faculdade de Direito da Universidade Salvador (UNIFACS)
+        <div class="social-links">
+            <a href="https://www.instagram.com/raiquelucas" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // Fallback para imagem com problema de carregamento
+        var img = document.getElementById('profileImg');
+        var fallbackDiv = document.getElementById('fallbackContent');
+        if (img && fallbackDiv) {
+            img.onerror = function() {
+                img.style.display = 'none';
+                fallbackDiv.style.display = 'flex';
+            };
+            // Se a imagem já tiver falhado antes do evento ser registrado
+            if (!img.complete || img.naturalWidth === 0) {
+                setTimeout(function() {
+                    if (img.naturalWidth === 0 && img.style.display !== 'none') {
+                        img.style.display = 'none';
+                        if (fallbackDiv) fallbackDiv.style.display = 'flex';
+                    }
+                }, 2000);
+            }
+        }
+
+        // E-mail institucional com alerta
+        var emailLink = document.getElementById('emailNew');
+        if (emailLink) {
+            emailLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert("E-mail institucional: raique.correia@ulife.com.br (para correspondência acadêmica).");
+            });
+        }
+    })();
+</script>
+</body>
+</html>
