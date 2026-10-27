@@ -1,846 +1,587 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Prof. Raique Lucas de Jesus Correia · UNIFACS · Faculdade de Direito</title>
-    <!-- Fontes padronizadas -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14283f">
+<meta name="description" content="Página acadêmica de Raique Lucas de Jesus Correia, advogado, professor e pesquisador em Direito, cidadania e desenvolvimento urbano.">
+<title>Raique Lucas de Jesus Correia — Perfil Acadêmico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600;700&display=swap');
+:root{--yale:#00356b;--yale-deep:#062c54;--red:#b31b1b;--ink:#292f35;--muted:#65717d;--line:#dce2e8;--paper:#fff;--soft:#f5f6f7;--max:1220px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 'Libre Franklin',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#174f7a;text-underline-offset:3px}a:hover{color:var(--red)}
+.skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.8rem;z-index:1000}
+.topbar{display:none}.page{max-width:none;margin:0;padding:0 0 56px}
+.primary-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);padding:0 5vw}
+.nav-inner{max-width:var(--max);min-height:49px;margin:auto;display:flex;align-items:center;gap:28px;overflow-x:auto;white-space:nowrap}
+.nav-inner a{font-size:.79rem;font-weight:500;color:#243d55;text-decoration:none;padding:15px 0 12px;border-bottom:2px solid transparent}
+.nav-inner a:hover,.nav-inner a.active{color:var(--red);border-bottom-color:var(--red)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:44px;align-items:start;background:var(--yale);color:#fff;padding:25px max(5vw,calc((100vw - var(--max))/2)) 38px;position:relative}
+.hero-content{min-width:0;grid-column:1;grid-row:1}
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 28px;color:#dbe7f1;font-size:.76rem}
+.breadcrumb a{color:#fff;text-decoration:underline}.breadcrumb span{opacity:.8}
+.hero h1{font:400 clamp(2.35rem,4vw,3.55rem)/1.18 'Libre Baskerville',Georgia,serif;letter-spacing:-.04em;margin:0 0 15px;color:#fff}
+.hero-subtitle{font-size:.91rem;line-height:1.6;color:#fff;margin:0 0 5px}
+.hero-subtitle:before{content:'';display:inline-block;width:3px;height:1.1em;background:#e04b45;vertical-align:-.15em;margin-right:11px}
+.hero-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin:30px 0 22px;max-width:880px}
+.hero-highlight h2{font:700 1rem/1.4 'Libre Baskerville',Georgia,serif;color:#fff;margin:0 0 12px}
+.hero-highlight p,.hero-highlight li{font-size:.8rem;line-height:1.7;color:#f2f6fa;margin:0 0 5px}
+.hero-highlight ul{margin:0;padding-left:18px}.hero-highlight li{padding-left:2px}
+.hero-links{display:flex;flex-wrap:wrap;gap:9px 15px;margin-top:20px}
+.hero-links a{font-size:.73rem;color:#fff;text-decoration:none;border-bottom:1px solid #ffffff66;padding-bottom:2px;overflow-wrap:anywhere}
+.hero-links a:hover{color:#f6c8c5;border-color:#f6c8c5}
+.portrait-wrap{grid-column:2;grid-row:1;width:100%;height:285px;margin:0 0 -72px;overflow:hidden;background:#dce3e9}
+.portrait-wrap img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 24%}
+.layout{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:46px;padding:100px 0 0;align-items:start}
+.main-column{min-width:0}.section{padding:0 0 28px;margin:0 0 25px;border-bottom:1px solid #e7eaed}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:15px}
+.section-kicker{display:block;color:var(--red);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+.section h2{font:400 1.65rem/1.35 'Libre Baskerville',Georgia,serif;color:var(--yale);letter-spacing:-.025em;margin:0}
+.section h2:after{content:'';display:block;width:43px;height:2px;background:var(--red);margin-top:9px}
+.section-intro{color:var(--muted);font-size:.86rem;max-width:760px;margin:10px 0 18px}
+.bio{font-size:.88rem;line-height:1.85;color:#353b40}.bio p{margin:0 0 14px}
+.pub-tools{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 20px}
+.searchbox{flex:1;min-width:220px;position:relative}.searchbox i{position:absolute;left:12px;top:13px;color:#77838d;font-size:.8rem}
+.searchbox input{width:100%;border:1px solid #cfd7de;background:#fff;padding:10px 12px 10px 35px;font:inherit;font-size:.8rem;outline:none}
+.searchbox input:focus{border-color:var(--yale)}
+.filter-btn{border:1px solid #cfd7de;background:#fff;color:#344b60;padding:9px 12px;font-size:.76rem;cursor:pointer}
+.filter-btn[aria-pressed=true]{background:var(--yale);border-color:var(--yale);color:#fff}
+.pub-item{padding:16px 0 17px;border-top:1px solid var(--line)}.pub-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:6px}
+.type-tag,.index-tag{font-size:.61rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:3px 7px;background:#e9edf1;color:#40576a}
+.index-tag{background:#f1e9dc;color:#765e37}.pub-title{font:700 1rem/1.55 'Libre Baskerville',Georgia,serif;color:var(--yale);margin:0 0 5px}
+.pub-title a{text-decoration:none}.pub-authors,.pub-journal{font-size:.78rem;color:#53616d;margin:0 0 3px}.pub-journal{font-style:italic}
+.pub-empty{padding:22px;color:var(--muted);display:none}.text-link{font-size:.75rem;font-weight:600;text-decoration:none;display:inline-block;margin-top:12px}
+.project-list{display:grid;gap:12px}.project{border:1px solid #e1e6ea;padding:17px 18px;transition:border-color .2s}.project:hover{border-color:#9eafbd}
+.project-type{font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:700}
+.project h3{font:700 .95rem/1.55 'Libre Baskerville',Georgia,serif;margin:6px 0;color:var(--yale)}
+.project p{font-size:.81rem;color:#53616d;margin:7px 0 0}.project-meta{font-size:.72rem;color:#687684;margin-top:9px}
+.timeline{border-left:1px solid #cbd4dc;margin-left:6px;padding-left:22px;display:grid;gap:20px}
+.timeline-item{position:relative}.timeline-item:before{content:'';position:absolute;width:8px;height:8px;background:var(--red);border:2px solid #fff;border-radius:50%;left:-28px;top:7px}
+.timeline-item h3{font:700 .95rem/1.5 'Libre Baskerville',Georgia,serif;margin:0 0 4px;color:var(--yale)}
+.timeline-item .meta{font-size:.72rem;color:#6a7480;font-weight:700;display:block;margin-bottom:3px}
+.timeline-item p{font-size:.81rem;color:#596570;margin:5px 0}
+.sandwich-study{background:#f7f4f1;border-left:3px solid var(--red);padding:15px 16px;margin-left:-12px}.sandwich-study:before{background:var(--red)!important;left:-34px!important}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:7px}.tag{border:0;background:#edf1f4;padding:6px 10px;font-size:.74rem;color:#294967;border-radius:2px}.tag:hover{background:#e2e9ef}
+.sidebar{min-width:0}.side-card{background:#f6f6f5;padding:19px 20px;margin:0 0 12px}
+.side-card h2{font:700 1rem/1.45 'Libre Baskerville',Georgia,serif;color:#1b3653;margin:0 0 15px}
+.side-card h2:after{content:'';display:block;width:38px;height:1px;background:#4384b8;margin-top:9px}
+.side-card p,.side-card li{font-size:.77rem;line-height:1.65;color:#4e5964}.side-card ul{padding-left:17px;margin:0}.side-card li{margin:0 0 8px}
+.side-card a{color:#164f7e;text-underline-offset:3px}.contact-card p{overflow-wrap:anywhere;margin:0 0 13px}.contact-card p i{color:var(--yale);width:18px;margin-right:5px}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px;border-top:1px solid #d9dfe4;padding-top:13px;margin-top:8px}.contact-links a{font-size:.72rem}
+.side-stat{display:grid;grid-template-columns:25px 1fr;gap:9px;margin:0 0 14px;align-items:start}.side-stat:last-child{margin-bottom:0}
+.side-stat .number{font-size:1rem;color:var(--red);padding-top:2px}.side-stat p{margin:0;font-size:.75rem}.side-stat strong{color:#173958}
+.education-item{margin:0 0 14px;padding:0 0 13px 12px;border-left:2px solid #d4dce4;border-bottom:1px solid #e4eaf0}
+.education-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}.education-item strong{display:block;font:700 .82rem/1.5 'Libre Baskerville',Georgia,serif;color:#173958}
+.education-item span{display:block;font-size:.72rem;color:#65717d;line-height:1.55;margin-top:3px}.education-item.featured{padding:13px 14px;border:1px solid #ead6d2;border-left:4px solid var(--red);background:#fff;margin-left:0}
+.education-item .edu-label{color:#a52229;font-size:.61rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.education-item .edu-detail{margin-top:7px}.education-item .edu-detail b{color:#34485d}
+details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:15px 0;display:flex;justify-content:space-between;gap:15px;align-items:center;color:var(--yale);font-weight:600;font-size:.83rem}
+summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:1.2rem;font-weight:400;color:var(--red)}details[open] summary:after{content:'−'}
+.details-content{padding:0 0 17px;color:var(--muted);font-size:.8rem}.details-content ul{padding-left:20px;margin:0}.details-content li{margin-bottom:7px}
+.footer{max-width:var(--max);margin:0 auto;border-top:1px solid var(--line);padding:23px 0 0;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#78838d;font-size:.7rem}
+.back-top{position:fixed;right:20px;bottom:20px;width:40px;height:40px;border:0;background:var(--yale);color:#fff;cursor:pointer;display:none}.back-top.show{display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1280px){.layout{padding-left:28px;padding-right:28px}.footer{margin-left:28px;margin-right:28px}}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr) 230px;gap:25px;padding-left:28px;padding-right:28px}.portrait-wrap{height:250px;margin-bottom:-55px}.layout{grid-template-columns:minmax(0,1fr) 255px;gap:28px;padding-top:85px}.hero-highlights{gap:20px}}
+@media(max-width:700px){.primary-nav{padding:0 20px}.nav-inner{gap:20px}.hero{grid-template-columns:1fr;padding:20px 20px 28px;gap:20px}.hero-content{grid-column:1;grid-row:2}.portrait-wrap{grid-column:1;grid-row:1;width:min(100%,390px);height:245px;margin:0}.breadcrumb{margin-bottom:20px;font-size:.72rem}.hero h1{font-size:2.1rem}.hero-subtitle{font-size:.84rem}.hero-highlights{grid-template-columns:1fr;gap:18px;margin:23px 0 17px}.layout{grid-template-columns:1fr;padding:28px 20px 0;gap:8px}.sidebar{display:block}.side-card{padding:18px;margin-bottom:10px}.section h2{font-size:1.42rem}.section-heading{display:block}.section-heading .text-link{margin-top:8px}.footer{margin:0 20px;padding-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-        body {
-            background: #f7f9fc;
-            font-family: 'Source Sans Pro', sans-serif;
-            color: #1e2f3d;
-            line-height: 1.5;
-        }
 
-        .page-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 2rem 2rem 3rem;
-        }
-
-        /* cabeçalho */
-        .hero-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2.5rem;
-            align-items: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
-            position: relative;
-        }
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100px;
-            height: 3px;
-            background: #9b2e2a;
-        }
-
-        .photo-frame {
-            flex-shrink: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 3px solid #ffffff;
-            outline: 1px solid #e2e8f0;
-        }
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .photo-fallback {
-            text-align: center;
-            color: #9aaebf;
-            font-size: 0.8rem;
-        }
-        .photo-fallback i {
-            font-size: 3rem;
-            margin-bottom: 0.3rem;
-            display: block;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-        .hero-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1a3a4a;
-            letter-spacing: -0.2px;
-            margin-bottom: 0.3rem;
-        }
-        .hero-subtitle {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #9b2e2a;
-            border-left: 3px solid #9b2e2a;
-            padding-left: 1rem;
-            margin: 0.4rem 0 0.4rem 0;
-        }
-        .appointments {
-            font-size: 0.85rem;
-            color: #4a627a;
-            margin-top: 0.5rem;
-            line-height: 1.5;
-        }
-        .appointments i {
-            width: 1.6rem;
-            color: #9b2e2a;
-            font-size: 0.85rem;
-        }
-        .contact-row {
-            margin-top: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-        }
-        .contact-row a {
-            color: #2c6280;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: color 0.2s;
-            border-bottom: 1px solid transparent;
-        }
-        .contact-row a:hover {
-            color: #9b2e2a;
-            border-bottom-color: #9b2e2a;
-        }
-
-        /* grid */
-        .two-col-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        /* cards */
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem 1.8rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            border: 1px solid #eef2f6;
-        }
-        .card h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1a4a5a;
-            margin-bottom: 1rem;
-            border-left: 4px solid #9b2e2a;
-            padding-left: 1rem;
-        }
-        .bio-text {
-            font-size: 0.9rem;
-            line-height: 1.65;
-            color: #2d445b;
-            text-align: justify;
-        }
-
-        /* publicações */
-        .pub-item {
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #f0f3f8;
-            padding-bottom: 0.8rem;
-        }
-        .pub-title {
-            font-weight: 700;
-            font-size: 0.88rem;
-            color: #1c4b6e;
-        }
-        .pub-authors {
-            font-size: 0.78rem;
-            color: #6f8eaa;
-            margin-top: 0.2rem;
-        }
-        .pub-journal {
-            font-size: 0.74rem;
-            font-style: italic;
-            color: #b1946c;
-        }
-        .pub-tag {
-            display: inline-block;
-            font-size: 0.62rem;
-            font-weight: 600;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            margin-right: 0.5rem;
-            background: #eef2fa;
-            color: #2c6280;
-        }
-        .index-tag {
-            display: inline-block;
-            font-size: 0.6rem;
-            font-weight: 600;
-            padding: 0.15rem 0.5rem;
-            border-radius: 12px;
-            margin-left: 0.4rem;
-            background: #e6f0ea;
-            color: #2d6a4f;
-        }
-
-        /* projetos */
-        .project-item {
-            margin-bottom: 1rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid #f0f3f8;
-            font-size: 0.85rem;
-        }
-        .project-item strong {
-            font-size: 0.88rem;
-            color: #1c4b6e;
-        }
-        .project-tag {
-            display: inline-block;
-            font-size: 0.6rem;
-            font-weight: 600;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            margin-right: 0.6rem;
-            background: #eef2fa;
-            color: #2c6280;
-        }
-
-        .teaching-item {
-            margin-bottom: 0.8rem;
-            font-size: 0.88rem;
-        }
-        .teaching-item i {
-            width: 1.6rem;
-            color: #9b2e2a;
-            font-size: 0.9rem;
-        }
-        .btn-scholar {
-            display: inline-block;
-            margin-top: 0.8rem;
-            background: #1c4b6e;
-            color: white;
-            padding: 0.45rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .btn-scholar i {
-            margin-right: 0.4rem;
-        }
-        .btn-scholar:hover {
-            background: #9b2e2a;
-        }
-
-        /* sidebar */
-        .sidebar-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid #eef2f6;
-        }
-        .sidebar-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #1a4a5a;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #eaeff5;
-            padding-bottom: 0.4rem;
-        }
-
-        /* timeline sem linha vertical - apenas bolinhas */
-        .timeline {
-            position: relative;
-            padding-left: 0;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 1.2rem;
-            padding-left: 1.8rem;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.3rem;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #9b2e2a;
-            border: 2px solid white;
-            box-shadow: 0 0 0 2px #9b2e2a;
-        }
-        .timeline-degree {
-            font-weight: 700;
-            font-size: 0.88rem;
-            color: #1c4b6e;
-        }
-        .timeline-institution {
-            font-size: 0.78rem;
-            color: #6f8eaa;
-            margin: 0.2rem 0;
-        }
-        .timeline-details {
-            font-size: 0.74rem;
-            color: #5a6e82;
-            margin-top: 0.2rem;
-        }
-
-        .interest-tag {
-            background: #f0f4fa;
-            padding: 0.2rem 0.7rem;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            display: inline-block;
-            margin: 0.2rem 0.2rem;
-            color: #2c6280;
-            border: 1px solid #e2eaf2;
-        }
-
-        .advisor-card {
-            background: #fafcfd;
-            border-radius: 12px;
-            padding: 0.8rem;
-            margin-bottom: 0.8rem;
-            border-left: 3px solid #9b2e2a;
-        }
-        .advisor-name {
-            font-weight: 700;
-            color: #1c4b6e;
-            font-size: 0.85rem;
-        }
-
-        .research-group-card {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 0.9rem;
-            margin-bottom: 0.8rem;
-            border: 1px solid #e8edf3;
-            transition: all 0.2s;
-        }
-        .research-group-card:hover {
-            border-color: #9b2e2a;
-            background: #ffffff;
-        }
-        .research-group-title {
-            font-weight: 700;
-            color: #1c4b6e;
-            font-size: 0.85rem;
-        }
-        .research-group-detail {
-            font-size: 0.75rem;
-            color: #6f8eaa;
-            margin-top: 0.2rem;
-        }
-
-        .prize-item {
-            font-size: 0.78rem;
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px dashed #eef2f8;
-            color: #3c5a73;
-        }
-        .prize-item strong {
-            color: #1c4b6e;
-        }
-
-        .complement-item {
-            font-size: 0.76rem;
-            margin-bottom: 0.6rem;
-            padding-left: 0.5rem;
-            border-left: 2px solid #9b2e2a;
-            color: #4a6579;
-        }
-
-        .edu-meta {
-            font-size: 0.76rem;
-            color: #6f8eaa;
-            line-height: 1.4;
-        }
-        .footer-note {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #8aa0b5;
-            border-top: 1px solid #e4ecf3;
-            padding-top: 2rem;
-        }
-        .social-links {
-            margin-top: 0.8rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-        .social-links a {
-            color: #8aa0b5;
-            font-size: 1.2rem;
-            transition: color 0.2s;
-        }
-        .social-links a:hover {
-            color: #9b2e2a;
-        }
-
-        @media (max-width: 850px) {
-            .two-col-layout {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .hero-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-            .hero-subtitle {
-                text-align: center;
-            }
-            .contact-row {
-                justify-content: center;
-            }
-            .hero-section::after {
-                left: 50%;
-                transform: translateX(-50%);
-                width: 100px;
-            }
-            .card, .sidebar-card {
-                padding: 1.2rem;
-            }
-        }
-/* Estilo de destaque para o Doutorado Sanduíche (sem linha, com fundo e ícone) */
-.sandwich-highlight {
-    display: flex;
-    gap: 0.8rem;
-    background: #fff8f0;
-    border-left: 3px solid #9b2e2a;
-    border-radius: 12px;
-    padding: 0.8rem 1rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.2rem;
-    margin-left: 0.3rem;
-    transition: all 0.2s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+/* Reconstrução limpa: layout acadêmico com coluna lateral integrada à hero */
+:root{
+ --yale:#003b71; --yale-deep:#062c54; --red:#b31b1b;
+ --ink:#292f35; --muted:#65717d; --line:#dce2e8; --max:1160px;
+ --body-font:'Source Sans 3','Segoe UI',sans-serif;
+ --display-font:'Lora',Georgia,serif;
+}
+html,body,button,input,textarea,select{font-family:var(--body-font)}
+body{font-size:15px;line-height:1.68;color:var(--ink);background:#fff}
+.page{max-width:none;width:100%;padding:0 0 40px;position:relative}
+.primary-nav{display:none!important}
+.topbar{display:none!important}
+.hero{
+ position:relative;display:block;width:100%;height:auto;min-height:340px;
+ padding:26px max(28px,calc((100vw - var(--max))/2)) 32px;
+ background:var(--yale);color:#fff;overflow:visible;z-index:2;
+}
+.hero-content{width:calc(100% - 270px);max-width:850px;min-width:0;position:relative;z-index:2}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 27px;font:12px/1.5 var(--body-font);color:#e5edf5}
+.breadcrumb a{color:#fff;text-underline-offset:2px}
+.hero h1{font:400 clamp(35px,3.4vw,46px)/1.18 var(--display-font);letter-spacing:-.6px;color:#fff;margin:0 0 12px}
+.hero-subtitle{font:15px/1.65 var(--body-font);color:#fff;margin:0 0 6px;max-width:850px}
+.hero-subtitle:before{display:none}
+.hero-highlights{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:38px;margin:30px 0 20px;max-width:850px}
+.hero-highlight h2{font:700 17px/1.4 var(--display-font);color:#fff;margin:0 0 12px}
+.hero-highlight p,.hero-highlight li{font:14px/1.65 var(--body-font);color:#f5f8fb;margin:0 0 6px}
+.hero-highlight ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.hero-highlight li{padding:7px 0;margin:0;border-bottom:1px solid rgba(255,255,255,.24)}
+.hero-highlight li:last-child{border-bottom:0}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px 17px;margin-top:22px}
+.hero-links a{display:inline-flex;align-items:center;gap:6px;color:#fff;font:13px/1.5 var(--body-font);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.48);padding:3px 0 5px;overflow-wrap:anywhere}
+.hero-links a:hover{color:#f4d7d5;border-color:#f4d7d5}
+.sidebar{
+ position:absolute;top:62px;right:max(28px,calc((100vw - var(--max))/2));z-index:6;
+ display:block;width:220px;min-width:0;margin:0;padding:0;background:transparent;
+}
+.portrait-wrap{display:block;width:220px;height:270px;margin:0;padding:0;overflow:hidden;background:#dce3e9}
+.portrait-wrap img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 24%}
+.side-card,.side-card.contact-card{display:block;width:100%;box-sizing:border-box;padding:18px 19px;margin:0 0 14px;background:#f6f6f5;border:0;border-radius:0;box-shadow:none;overflow-wrap:break-word;word-break:normal}
+.side-card h2{font:400 18px/1.4 var(--display-font);color:var(--yale);margin:0 0 13px}
+.side-card h2:after{display:none}
+.side-card p,.side-card li{font:12px/1.6 var(--body-font);color:#4f5963;margin:0 0 10px;overflow-wrap:anywhere;word-break:normal}
+.side-card ul{padding-left:17px;margin:0}
+.side-card li{margin-bottom:7px}
+.side-card a{color:#164b7a;text-underline-offset:2px;overflow-wrap:anywhere;word-break:normal}
+.contact-card p{font:12px/1.6 var(--body-font);margin:0 0 10px}
+.contact-card p i{color:var(--yale);width:16px;margin-right:5px}
+.contact-links{display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid #d9dfe4;padding-top:11px;margin-top:8px}
+.contact-links a{font-size:12px}
+.side-stat{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;margin:0 0 12px;align-items:start}
+.side-stat:last-child{margin-bottom:0}
+.side-stat .number{display:block;font-size:13px;color:#527b9e;padding-top:2px}
+.side-stat p{font-size:12px;line-height:1.6;margin:0;min-width:0}
+.side-stat strong{display:inline-block;color:#173958;font-weight:700;margin-bottom:4px}
+.education-item{margin:0 0 13px;padding:0 0 12px 11px;border-left:2px solid #d4dce4;border-bottom:1px solid #e4e8eb}
+.education-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}
+.education-item strong{display:block;font:600 14px/1.45 var(--body-font);color:#173958}
+.education-item span{display:block;font:12px/1.55 var(--body-font);color:#65717d;margin-top:4px}
+.education-item.featured{padding:12px 13px;margin-bottom:13px;border:0;border-left:3px solid var(--red);background:#fff}
+.education-item .edu-label{font:600 11px/1.4 var(--body-font);color:#65717d;letter-spacing:.025em;margin:0 0 5px}
+.education-card .edu-institution{display:block;width:100%;margin-top:5px;padding:0;border:0;background:transparent;color:#647587;font:600 12px/1.45 var(--body-font);overflow-wrap:normal}
+.layout{
+ position:relative;max-width:var(--max);margin:0 auto;padding:38px 0 0;
+ display:grid;grid-template-columns:minmax(0,1fr) 220px;column-gap:38px;align-items:start;
+}
+.main-column{grid-column:1;min-width:0;width:100%;max-width:850px}
+.section{padding:0 0 28px;margin:0 0 26px;border-bottom:1px solid #e7eaed}
+.section-heading{margin:0 0 14px}
+.section h2{font:400 28px/1.35 var(--display-font);color:var(--yale);margin:0}
+.section h2:after{display:none}
+.bio{font:15px/1.8 var(--body-font);color:#343a40;overflow-wrap:break-word}
+.bio p{margin:0 0 13px}
+.section-intro,.pub-authors,.pub-journal,.project p,.timeline-item p,.details-content{font-family:var(--body-font)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:7px}
+.tag{display:inline-block;font:12px/1.4 var(--body-font);padding:6px 10px;border:0;border-radius:2px;background:#edf1f4;color:#294967}
+.footer{max-width:var(--max);margin:25px auto 0;padding:18px 0 0;font:12px/1.5 var(--body-font)}
+@media(max-width:1220px){
+ .hero{padding-left:28px;padding-right:28px}
+ .sidebar{right:28px}
+ .layout{padding-left:28px;padding-right:28px}
+ .footer{margin-left:28px;margin-right:28px}
+}
+@media(max-width:900px){
+ .hero{padding:24px 24px 30px;min-height:0}
+ .hero-content{width:calc(100% - 225px)}
+ .sidebar{top:58px;right:24px;width:190px}
+ .portrait-wrap{width:190px;height:240px}
+ .side-card,.side-card.contact-card{padding:15px}
+ .layout{grid-template-columns:minmax(0,1fr) 190px;column-gap:28px;padding:30px 24px 0}
+ .hero-highlights{gap:22px}
+ .hero h1{font-size:36px}
+}
+@media(max-width:700px){
+ .hero{padding:22px 20px 28px}
+ .hero-content{width:100%;max-width:none}
+ .hero h1{font-size:32px}
+ .hero-highlights{grid-template-columns:1fr;gap:18px;margin-top:24px}
+ .sidebar{position:static;top:auto;right:auto;width:100%;padding:0 20px;display:flex;flex-direction:column;margin:0;background:#fff}
+ .portrait-wrap{width:150px;height:190px;margin:0 0 12px}
+ .side-card,.side-card.contact-card{width:100%;padding:16px;margin-bottom:10px}
+ .layout{display:block;padding:28px 20px 0}
+ .main-column{max-width:none}
+ .sidebar{display:flex}
+ .footer{margin:22px 20px 0}
+ .section h2{font-size:25px}
+}
+@media(max-width:480px){
+ .hero h1{font-size:29px;overflow-wrap:anywhere}
+ .hero-highlights{grid-template-columns:1fr}
+ .hero-links{flex-direction:column;align-items:flex-start;gap:7px}
+ .bio{font-size:14px}
 }
 
-.sandwich-highlight:hover {
-    background: #fff5ea;
-    border-left-color: #c97a77;
+
+/* Revisão final de acessibilidade: foco visível e links consistentes */
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible{outline:2px solid #4c83ad;outline-offset:3px}
+/* Padronização tipográfica final: uma única família sans-serif, leve e moderna */
+:root{--body-font:'Source Sans 3','Segoe UI',sans-serif;--display-font:'Source Sans 3','Segoe UI',sans-serif}
+html,body,button,input,textarea,select,
+.hero h1,.hero-subtitle,.hero-highlight h2,.hero-highlight p,.hero-highlight li,
+.hero-links a,.section h2,.section-intro,.bio,.pub-title,.pub-authors,.pub-journal,
+.project h3,.project p,.timeline-item h3,.timeline-item p,.side-card h2,.side-card p,
+.side-card li,.education-item strong,.education-item span,summary,.details-content,.footer,
+.nav-inner a,.breadcrumb{font-family:var(--body-font)!important}
+body{font-weight:400}
+.hero h1{font-weight:400!important;letter-spacing:-.035em}
+.section h2{font-weight:400!important;letter-spacing:-.025em}
+.hero-highlight h2,.side-card h2{font-weight:600!important}
+.section-kicker{display:none!important}
+
+
+
+/* Padronização localizada: Vínculos atuais, Docência e internacionalização e Formação do corpo */
+/* Mantém intactos a hero, a foto, a coluna lateral e as demais seções. */
+.current-affiliations .side-stat{
+  display:grid;
+  grid-template-columns:18px minmax(0,1fr);
+  align-items:start;
+  gap:9px;
+  margin:0;
+  padding:12px 0;
+  border-bottom:1px solid #dfe5ea;
+}
+.current-affiliations .side-stat:first-of-type{padding-top:2px}
+.current-affiliations .side-stat:last-child{padding-bottom:0;border-bottom:0}
+.current-affiliations .side-stat .number{
+  display:block;
+  color:#47708f;
+  font-size:13px;
+  line-height:1.55;
+  padding-top:1px;
+}
+.current-affiliations .side-stat p{
+  min-width:0;
+  margin:0;
+  color:#5b6670;
+  font:400 12px/1.55 var(--body-font,'Source Sans 3',sans-serif);
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.current-affiliations .side-stat strong{
+  display:block;
+  color:#173958;
+  font:600 13px/1.4 var(--body-font,'Source Sans 3',sans-serif);
+  margin-bottom:4px;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+/* Corpo: duas seções cronológicas com hierarquia comum e leitura mais leve */
+#docencia .timeline,
+#formacao .timeline{
+  margin:0;
+  padding:0 0 0 19px;
+  border-left:1px solid #d9e2e9;
+  gap:0;
+}
+#docencia .timeline-item,
+#formacao .timeline-item{
+  position:relative;
+  padding:0 0 19px 5px;
+  margin:0 0 17px;
+  border-bottom:1px solid #e4e9ed;
+  min-width:0;
+}
+#docencia .timeline-item:last-child,
+#formacao .timeline-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0}
+#docencia .timeline-item:before,
+#formacao .timeline-item:before{
+  left:-25px;
+  top:5px;
+  width:7px;
+  height:7px;
+  border:2px solid #fff;
+  background:#527b9b;
+  box-shadow:0 0 0 1px #527b9b;
+}
+#docencia .timeline-item .meta,
+#formacao .timeline-item .meta{
+  display:block;
+  margin:0 0 5px;
+  color:#64798a;
+  font:600 12px/1.45 var(--body-font,'Source Sans 3',sans-serif);
+  letter-spacing:.015em;
+}
+#docencia .timeline-item h3,
+#formacao .timeline-item h3{
+  margin:0 0 6px;
+  color:#173f61;
+  font:600 17px/1.4 var(--body-font,'Source Sans 3',sans-serif);
+  letter-spacing:-.01em;
+}
+#docencia .timeline-item p,
+#formacao .timeline-item p{
+  margin:0 0 7px;
+  color:#4e5963;
+  font:400 14px/1.7 var(--body-font,'Source Sans 3',sans-serif);
+}
+#docencia .timeline-item p:last-child,
+#formacao .timeline-item p:last-child{margin-bottom:0}
+#formacao .timeline-item strong{color:#344f66;font-weight:600}
+#formacao .timeline-item.sandwich-study{
+  margin:0 0 17px -8px;
+  padding:15px 17px 17px 22px;
+  background:#f5f8fa;
+  border:0;
+  border-left:3px solid #7895ad;
+}
+#formacao .timeline-item.sandwich-study:before{left:-16px;top:18px;background:#527b9b;box-shadow:0 0 0 1px #527b9b}
+@media(max-width:700px){
+  .current-affiliations .side-stat{grid-template-columns:17px minmax(0,1fr);gap:8px}
+  .current-affiliations .side-stat p{font-size:12px}
+  #docencia .timeline,#formacao .timeline{padding-left:17px}
+  #docencia .timeline-item:before,#formacao .timeline-item:before{left:-23px}
+  #docencia .timeline-item h3,#formacao .timeline-item h3{font-size:16px}
+  #docencia .timeline-item p,#formacao .timeline-item p{font-size:13.5px;line-height:1.65}
 }
 
-.sandwich-icon {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    background: #9b2e2a10;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9b2e2a;
-    font-size: 1rem;
-}
 
-.sandwich-content {
-    flex: 1;
-}
 
-.sandwich-title {
-    font-weight: 700;
-    font-size: 0.82rem;
-    color: #9b2e2a;
-    letter-spacing: -0.2px;
-    margin-bottom: 0.2rem;
-}
+/* Ajustes formais e localizados: vínculos, formação e orientação */
+.current-affiliations .side-stat{grid-template-columns:minmax(0,1fr);gap:0;padding:11px 0;border-bottom:1px solid #e1e5e8}
+.current-affiliations .side-stat .number{display:none}
+.current-affiliations .side-stat p{font-size:12px;line-height:1.55;color:#59636d}
+.current-affiliations .side-stat strong{font-size:13px;line-height:1.4;font-weight:600;color:#203d57;margin:0 0 4px}
+.education-card .education-item{padding:0 0 10px 10px!important;margin:0 0 10px!important;border-left:1px solid #d7dfe6!important;border-bottom:1px solid #e5e9ed!important}
+.education-card .education-item:last-of-type{border-bottom:0!important;margin-bottom:0!important;padding-bottom:0!important}
+.education-card .edu-label{font-size:11px!important;letter-spacing:0!important;text-transform:none!important;color:#697783!important}
+.education-card .education-item strong{font-size:13px!important;font-weight:600!important;line-height:1.45!important}
+.education-card .edu-institution{font-size:12px!important;font-weight:400!important;color:#5e6973!important}
+.guidance-card .guidance-item{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid #e1e5e8}
+.guidance-card .guidance-item:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.guidance-card .guidance-item strong{display:block;color:#203d57;font:600 13px/1.45 var(--body-font,'Source Sans 3',sans-serif);margin:0 0 3px}
+.guidance-card .guidance-item p{margin:0;color:#59636d;font:400 12px/1.55 var(--body-font,'Source Sans 3',sans-serif)}
+/* Formação no corpo: itens uniformes, sem cartão destacado */
+#formacao .timeline-item.sandwich-study{margin:0 0 17px;padding:0 0 19px 5px;background:transparent;border:0;border-bottom:1px solid #e4e9ed;border-left:0}
+#formacao .timeline-item.sandwich-study:before{left:-25px;top:5px;background:#527b9b;box-shadow:0 0 0 1px #527b9b}
+#formacao .timeline-item .meta{color:#64717c;font-weight:600}
+#formacao .timeline-item h3{font-weight:600;color:#203d57}
+#formacao .timeline-item p strong{font-weight:600;color:#3e5365}
+@media(max-width:700px){.current-affiliations .side-stat{grid-template-columns:minmax(0,1fr)}.guidance-card .guidance-item{padding-bottom:9px;margin-bottom:9px}}
 
-.sandwich-institution {
-    font-size: 0.74rem;
-    color: #5a6e82;
-    font-weight: 500;
-    margin-bottom: 0.1rem;
-}
+.language-switch{display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:8px max(24px,calc((100% - 1180px)/2));background:#14283f}.language-btn{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#fff;padding:4px 5px;cursor:pointer;font:600 11px/1 "Source Sans 3",sans-serif;letter-spacing:.08em;opacity:.78}.language-btn svg{width:25px;height:17px;display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}.language-btn svg g{fill:currentColor;stroke:none}.language-btn:hover,.language-btn:focus-visible,.language-btn[aria-pressed="true"]{opacity:1}.language-btn:focus-visible{outline:2px solid #fff;outline-offset:4px}@media(max-width:700px){.language-switch{padding:8px 18px}}
+</style>
 
-.sandwich-detail {
-    font-size: 0.71rem;
-    color: #7a95af;
-    line-height: 1.4;
-}
-    </style>
 </head>
 <body>
-<div class="page-wrapper">
-    <!-- cabeçalho -->
-    <div class="hero-section">
-        <div class="photo-frame" id="photoFrame">
-            <img src="https://0.academia-photos.com/98733907/21525196/185633193/s200_raique_lucas_de_jesus.correia.jpg" 
-                 alt="Prof. Raique Lucas de Jesus Correia" 
-                 id="profileImg"
-                 onerror="this.onerror=null; this.style.display='none'; document.getElementById('fallbackContent').style.display='flex';">
-            <div id="fallbackContent" style="display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; width:100%; height:100%;">
-                <i class="fas fa-user-graduate fa-3x" style="color:#9aaebf;"></i>
-                <span style="font-size:0.8rem; margin-top:0.3rem; color:#6f8eaa;">Raique L. Correia</span>
-            </div>
-        </div>
-        <div class="hero-text">
-            <h1>Raique Lucas de Jesus Correia</h1>
-            <div class="hero-subtitle">Professor da Faculdade de Direito da Universidade Salvador (UNIFACS) · Brasil</div>
-<div class="hero-subtitle">Advogado inscrito na Ordem dos Advogados do Brasil - Seccional Bahia (OAB/BA) · Brasil</div>
-            <div class="appointments">
-                <i class="fas fa-graduation-cap"></i> Doutorando e Mestre em Desenvolvimento Regional e Urbano · Universidade Salvador (UNIFACS) · Brasil<br>
-                <i class="fas fa-landmark"></i> Especialista em Políticas Públicas e Patrimônio Cultural · Universidade Federal da Bahia (UFBA) · Brasil<br>
-                <i class="fas fa-balance-scale"></i> Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH) · Brasil<br>
-                <i class="fas fa-users"></i> Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania - GPPEC/UNIFACS/CNPq · Brasil<br>
-                <i class="fas fa-globe-americas"></i> Pesquisador Colaborador · Instituto Jurídico Portucalense, Universidade Portucalense Infante D. Henrique (UPT) · Portugal<br>
-                <i class="fas fa-globe-americas"></i> Pesquisador Visitante · Facultad de Derecho, Universidad de Ixtlahuaca · México (2024-2025)
-            </div>
-            <div class="contact-row">
-                <a href="#" id="emailNew"><i class="far fa-envelope"></i> raique.correia@ulife.com.br</a>
-                <a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer"><i class="fab fa-google"></i> Google Scholar</a>
-                <a href="https://www.researchgate.net/profile/Raique-Correia" target="_blank" rel="noopener noreferrer"><i class="fab fa-researchgate"></i> ResearchGate</a>
-                <a href="https://unifica.academia.edu/RaiqueLucasdeJesusCorreia" target="_blank" rel="noopener noreferrer"><i class="fas fa-university"></i> Academia.edu</a>
-                <a href="http://dgp.cnpq.br/dgp/espelhorh/0200473611" target="_blank" rel="noopener noreferrer"><i class="fas fa-users"></i> GPPEC/CNPq</a>
-                <a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer"><i class="fas fa-scroll"></i> Currículo Lattes</a>
-                <a href="https://orcid.org/0000-0002-0488-3037" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
-                <a href="https://www.cienciavitae.pt/portal/E112-D7F1-7DD6" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> CIÊNCIAVITAE</a>
-            </div>
-        </div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="topbar"><div class="topbar-inner"><div class="institution">Universidade Salvador · UNIFACS</div><a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer">Currículo Lattes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></header>
+<div class="page">
+<div class="language-switch" aria-label="Selecionar idioma / Choose language / Elegir idioma">
+<button type="button" class="language-btn" data-lang="pt" aria-label="Português" title="Português" aria-pressed="true"><svg viewBox="0 0 60 40" aria-hidden="true"><rect x="1" y="1" width="58" height="38" rx="1"/><path d="M30 7 47 20 30 33 13 20Z"/><circle cx="30" cy="20" r="7"/><path d="M24 18q6-2 12 2"/></svg><span>PT</span></button>
+<button type="button" class="language-btn" data-lang="en" aria-label="English" title="English"><svg viewBox="0 0 60 40" aria-hidden="true"><rect x="1" y="1" width="58" height="38" rx="1"/><path d="M2 7H58 M2 13H58 M2 19H58 M2 25H58 M2 31H58"/><rect x="2" y="2" width="25" height="19" fill="#14283f"/><g><circle cx="7" cy="6" r="1"/><circle cx="13" cy="6" r="1"/><circle cx="19" cy="6" r="1"/><circle cx="7" cy="11" r="1"/><circle cx="13" cy="11" r="1"/><circle cx="19" cy="11" r="1"/></g></svg><span>EN</span></button>
+<button type="button" class="language-btn" data-lang="es" aria-label="Español" title="Español"><svg viewBox="0 0 60 40" aria-hidden="true"><rect x="1" y="1" width="58" height="38" rx="1"/><path d="M3 12H57 M3 28H57"/><path d="M21 15h8l3 4-4 7h-7z"/><circle cx="26" cy="20" r="1.5"/></svg><span>ES</span></button></div>
+<nav class="primary-nav" aria-label="Navegação principal"><div class="nav-inner">
+<a href="#perfil">Perfil</a><a href="#publicacoes">Publicações</a><a href="#pesquisa">Projetos</a><a href="#atuacao">Áreas de atuação</a><a href="#formacao">Formação</a><a href="#servico">Serviço acadêmico</a>
+</div></nav>
+<header class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="breadcrumb"><a href="#inicio">Início</a><span>|</span><a href="#perfil">Perfil acadêmico</a><span>|</span><span>Raique Lucas de Jesus Correia</span></div>
+    <h1>Raique Lucas de Jesus Correia</h1>
+    <p class="hero-subtitle">Coordenador e professor da Faculdade de Direito e de Relações Internacionais da Universidade Salvador (UNIFACS) · Brasil</p>
+    <p class="hero-subtitle">Advogado inscrito na Ordem dos Advogados do Brasil — Seccional Bahia (OAB/BA) · Brasil</p>
+    <div class="hero-highlights">
+      <div class="hero-highlight"><h2>Formação</h2><p>Doutorando em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)</p><p>Doutorado Sanduíche · Facultad de Derecho · Universidad de Ixtlahuacua CUI (México)</p><p>Mestre em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)</p><p>Especialista em Políticas Públicas e Patrimônio Cultural · UFBA (Brasil)</p><p>Graduado em Direito · UNISBA (Brasil)</p></div>
+      <div class="hero-highlight"><h2>Áreas de atuação</h2><ul><li>Direito Público</li><li>Direito Constitucional</li><li>Direito Urbanístico e Administrativo</li><li>Direitos Humanos e Fundamentais</li><li>Metodologia da Pesquisa Jurídica</li><li>Patrimônio Cultural e Direitos Culturais</li></ul></div>
     </div>
-
-    <!-- grid principal -->
-    <div class="two-col-layout">
-        <!-- coluna esquerda -->
-        <div>
-            <div class="card">
-                <h2>Biografia</h2>
-                <div class="bio-text">
-                    Advogado, professor e pesquisador. Doutorando em Desenvolvimento Regional e Urbano pela Universidade Salvador (UNIFACS), com bolsa da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Entre junho de 2025 e maio de 2026, realizou Doutorado Sanduíche na Universidad de Ixtlahuaca CUI (México), com bolsa do Programa de Doutorado Sanduíche no Exterior (PDSE/CAPES). Entre fevereiro e março de 2026, realizou Visiting Professor no Instituto de Formación Académica del Centro y Sureste - UNIVERSIDAD INFA (México). Mestre em Desenvolvimento Regional e Urbano pela UNIFACS. Especialista em Políticas Públicas e Patrimônio Cultural pela Universidade Federal da Bahia (UFBA). Bacharel em Direito pelo Centro Universitário Social da Bahia (UNISBA). Atua como professor da graduação em Direito da UNIFACS. Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH). Secretário Editorial da RDE - Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) da UNIFACS. Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq) e membro do Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq). Pesquisador colaborador em projeto vinculado ao Instituto Jurídico Portucalense (IJP) da Universidade Portucalense Infante D. Henrique (UPT, Portugal). Coordenou, em parceria com o Prof. Dr. José Euclimar Xavier de Menezes, o dossiê "Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade", publicado na CSOnline - Revista Eletrônica de Ciências Sociais (ISSN 1981-2140, Qualis B1), vinculada ao Programa de Pós-Graduação em Ciências Sociais (PPGCSO) da Universidade Federal de Juiz de Fora (UFJF). Foi roteirista e autor do argumento do documentário "Projeto CienciArt V - A Cidade pelo Avesso" (ANCINE CPB n. B25-002217-00000), produção do GPPEC/UNIFACS com financiamento público da Lei Paulo Gustavo (Lei Complementar n. 195/2022), conforme Edital PG02/2023 Produção Audiovisual Web da Secretaria de Cultura do Estado da Bahia (SECULT-BA).
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Publicações Selecionadas</h2>
-                <!-- Artigos em ordem cronológica decrescente (mais recente primeiro) -->
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <span class="index-tag"><i class="fas fa-globe"></i> SCOPUS · Web of Science</span>
-                    <div class="pub-title">O direito à cidade achado na rua: fundamentos teóricos e perspectivas epistemológicas</div>
-                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
-                    <div class="pub-journal">Revista Jurídica Portucalense, vol.2, pp. 154–184, 2026</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <span class="index-tag"><i class="fab fa-wikipedia-w"></i> Web of Science</span>
-                    <div class="pub-title">O 'direito achado na rua' e os novos 'sujeitos coletivos de direito': a luta social como paradigma do direito à cidade</div>
-                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
-                    <div class="pub-journal">Direito da Cidade (UERJ), v.17, pp. 282–310, 2025</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <div class="pub-title">Os direitos humanos na perspectiva crítica de 'o direito achado na rua'</div>
-                    <div class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</div>
-                    <div class="pub-journal">Revista do Instituto Brasileiro de Direitos Humanos, v.24/25, pp. 171–192, 2025</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <span class="index-tag"><i class="fab fa-wikipedia-w"></i> Web of Science</span>
-                    <div class="pub-title">A cidade e o cidadão: por uma abordagem político-territorial do conceito de cidadania a partir de uma perspectiva emancipatória</div>
-                    <div class="pub-authors">Correia, R. L. J.; Oliveira Filho, W. A.; Menezes, J. E. X.</div>
-                    <div class="pub-journal">Revista Geografares (UFES), v.4, pp. 1–40, 2024</div>
-                    <div class="pub-authors" style="margin-top: 0.2rem;"><em>Versão em inglês: The city and the citizen: for a political-territorial approach to the concept of citizenship from an emancipatory perspective (same journal)</em></div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <div class="pub-title">Movimentos sociais urbanos e cidadanias periféricas insurgentes. A luta dos moradores do Calabar (Salvador, BA) pelo direito à cidade</div>
-                    <div class="pub-authors">Correia, R. L. J.; Souza, G. B. G.; Menezes, J. E. X.</div>
-                    <div class="pub-journal">Revista Cidades, v.15, pp. 112–152, 2023</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <div class="pub-title">Os caminhos incertos do 'Direito e Literatura': perspectivas e potencialidades</div>
-                    <div class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.</div>
-                    <div class="pub-journal">Anamorphosis - Revista Internacional de Direito e Literatura, v.8, p.1-33, 2022</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-file-alt"></i> ARTIGO</span>
-                    <div class="pub-title">Habermas and the issue of religion in the public space: critical contributions to a new view on State laicity</div>
-                    <div class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.; Ferreira, F. B.</div>
-                    <div class="pub-journal">Revista da Faculdade de Direito do Sul de Minas, v.37, p.215-238, 2021</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-book"></i> LIVRO</span>
-                    <div class="pub-title">Direito, literatura & sertão: perspectivas decoloniais a partir do Romance d'A Pedra do Reino de Ariano Suassuna</div>
-                    <div class="pub-authors">Correia, R. L. J.</div>
-                    <div class="pub-journal">Editora Porta, 344p, 2022. ISBN 9786599907357</div>
-                </div>
-                <div class="pub-item">
-                    <span class="pub-tag"><i class="fas fa-book"></i> COLETÂNIA</span>
-                    <div class="pub-title">Diálogos interdisciplinares entre direitos humanos, filosofia & psicanálise: antologia em homenagem aos 30 anos de docência universitária do professor José Euclimar Xavier de Menezes</div>
-                    <div class="pub-authors">Correia, R. L. J. (Org.); Ferreira, L. E. S. (Org.); Barreto Junior, W. D. (Org.)</div>
-                    <div class="pub-journal">Editora Porta, João Pessoa, 2025, v.1, 356p. ISBN 9786585633314</div>
-                </div>
-                <a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" class="btn-scholar"><i class="fab fa-google"></i> Todos os artigos no Google Scholar</a>
-            </div>
-
-            <div class="card">
-                <h2>Projetos de Pesquisa e Extensão</h2>
-                <div class="project-item">
-                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
-                    <strong>Movimientos sociales insurgentes y prácticas contrahegemónicas en la producción del espacio urbano</strong><br>
-                    <strong>Instituições:</strong> UNIFACS (Brasil) · Universidad de Ixtlahuaca CUI (México)<br>
-                    <strong>Período:</strong> 2024-2025 · <strong>Financiamento:</strong> CAPES/PDSE<br>
-                    O projeto tem como objetivo comparar os impactos da atuação de movimentos sociais insurgentes em Salvador (Brasil) e Toluca (México) na articulação de práticas contra-hegemônicas de produção do espaço urbano e na efetivação da cidadania a partir da luta pelo direito à cidade, no período de 1970 a 2025.
-                </div>
-                <div class="project-item">
-                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
-                    <strong>Indicadores de Cidadania e Políticas Públicas</strong><br>
-                    <strong>Instituições:</strong> UNIFACS · Ministério Público da Bahia · UPT (Portugal) · USAL (Espanha)<br>
-                    <strong>Período:</strong> 2021-2022<br>
-                    Investigação sobre novas demandas e conflitos envolvendo práticas políticas em direitos humanos na contemporaneidade, com ênfase em violações em contextos de vulnerabilidade, relações de gênero, violência policial, desigualdades regionais e socioeconômicas.
-                </div>
-                <div class="project-item">
-                    <span class="project-tag"><i class="fas fa-flask"></i> PESQUISA</span>
-                    <strong>Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade</strong><br>
-                    <strong>Instituições:</strong> Universidade Portucalense (UPT) · Instituto Jurídico Portucalense (IJP)<br>
-                    <strong>Período:</strong> 2023-2024<br>
-                    Investigação sobre a materialização dos direitos humanos na cidade e na prisão, dois espaços fundamentais onde tais direitos são experimentados, garantidos ou violados, com especial atenção às periferias urbanas e sua relação com a densidade demográfica do sistema prisional.
-                </div>
-                <div class="project-item">
-                    <span class="project-tag"><i class="fas fa-film"></i> EXTENSÃO</span>
-                    <strong>Projeto CienciArt V - A Cidade pelo Avesso</strong><br>
-                    <strong>Instituição:</strong> GPPEC/UNIFACS · <strong>Financiamento:</strong> SECULT-BA (Lei Paulo Gustavo)<br>
-                    Documentário que coloca em evidência as vozes silenciadas das periferias urbanas, revelando formas criativas e inspiradoras com que os sujeitos periféricos recriam o espaço por meio de estratégias de resistência cultural, manifestações simbólicas e criação artística.
-                </div>
-                <div class="project-item">
-                    <span class="project-tag"><i class="fas fa-hands-helping"></i> EXTENSÃO</span>
-                    <strong>Favela em Movimento: Experiências Populares Emancipatórias e Práticas Políticas de Cidadania em Territórios Periféricos</strong><br>
-                    <strong>Instituição:</strong> UNIFACS · GPPEC<br>
-                    <strong>Período:</strong> 2023-2024<br>
-                    Projeto que perscruta investigar, a partir da inserção no bairro do Calabar (Salvador-BA), como a experiência dos movimentos sociais e sujeitos coletivos contribuem para a promoção de novas práticas de cidadania e efetivação de direitos à luz do programa teórico-metodológico de "O Direito Achado na Rua".
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Docência e Internacionalização</h2>
-                <div class="teaching-item">
-                    <i class="fas fa-chalkboard-teacher"></i> <strong>Professor do Curso de Direito da UNIFACS</strong><br>
-                    <strong>Grande Área:</strong> Direito Público<br>
-                    <strong>Disciplinas Específicas:</strong> Teoria Geral do Direito; Filosofia Jurídica; Direito Constitucional; Ciências Políticas e Teoria do Estado; Direitos Humanos; Metodologia da Pesquisa Científica.
-                </div>
-                <div class="teaching-item" style="margin-top: 1rem;">
-                    <i class="fas fa-user-graduate"></i> <strong>Orientador de Iniciação Científica (PIBIC/UNIFACS)</strong><br>
-                    Projeto: <em>"O Direito Achado nas Periferias: Práticas Jurídicas Emancipatórias e Construção da Cidadania em Territórios Marginalizados"</em>
-                </div>
-                <div class="teaching-item" style="margin-top: 1rem;">
-                    <i class="fas fa-globe-americas"></i> <strong>Estância de Pesquisa (Research Stay)</strong><br>
-                    Universidad de Ixtlahuaca CUI (México) · junho de 2024 a maio de 2025 · CAPES/PDSE
-                </div>
-                <div class="teaching-item" style="margin-top: 0.5rem;">
-                    <i class="fas fa-globe-americas"></i> <strong>Visiting Professor</strong><br>
-                    Instituto de Formación Académica del Centro y Sureste - UNIVERSIDAD INFA (México) · fevereiro-março 2026
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>Comissões Organizadoras de Congressos Internacionais</h2>
-                <div class="teaching-item">
-                    <i class="fas fa-calendar-alt"></i> <strong>Simpósios Internacionais em Direitos Humanos e Cidadania</strong><br>
-                    Universidade Portucalense Infante D. Henrique (UPT) · Portugal
-                </div>
-                <div class="teaching-item" style="margin-top: 0.8rem;">
-                    <i class="fas fa-calendar-alt"></i> <strong>Simpósios Internacionais em Direitos Humanos Aplicados</strong><br>
-                    Universidad de Salamanca (USAL) · Espanha
-                </div>
-            </div>
-        </div>
-
-        <!-- coluna direita (sidebar) -->
-<div>
-    <div class="sidebar-card">
-        <h3>Formação Acadêmica</h3>
-        <div class="timeline">
-            <!-- Doutorado principal -->
-            <div class="timeline-item">
-                <div class="timeline-degree">Doutorado em Desenvolvimento Regional e Urbano</div>
-                <div class="timeline-institution">Universidade Salvador (UNIFACS) · Brasil · 2023–presente | CAPES/PROSUP</div>
-                <div class="timeline-details">
-                    Título: A Cidadania na Periferia do Capitalismo: Movimentos Sociais Insurgentes e Práticas Contra-Hegemônicas de Produção do Espaço Urbano em Favelas do Brasil e México<br>
-                    Orientador: Prof. Dr. José Euclimar Xavier de Menezes
-                </div>
-                
-                <!-- Doutorado Sanduíche como subitem de destaque (tipo "badge de honra") -->
-                <div class="sandwich-highlight">
-                    <div class="sandwich-icon">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <div class="sandwich-content">
-                        <div class="sandwich-title">Doutorado Sanduíche no Exterior</div>
-                        <div class="sandwich-institution">Universidad de Ixtlahuaca CUI · México · 2024-2025 | CAPES/PDSE</div>
-                        <div class="sandwich-detail">Coorientador: Prof. Dr. Roberto Félix Olivares Gutiérrez</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mestrado -->
-            <div class="timeline-item">
-                <div class="timeline-degree">Mestrado em Desenvolvimento Regional e Urbano</div>
-                <div class="timeline-institution">Universidade Salvador (UNIFACS) · Brasil · 2021–2023 | CAPES/PROSUP</div>
-                <div class="timeline-details">
-                    Título: Cidadania e Territorialidade Periférica: A Luta pelo Direito à Cidade na Comunidade do Calabar em Salvador, Bahia, Brasil<br>
-                    Orientador: Prof. Dr. José Euclimar Xavier de Menezes
-                </div>
-            </div>
-
-            <!-- Especialização -->
-            <div class="timeline-item">
-                <div class="timeline-degree">Especialização em Gestão Social e Políticas Públicas do Patrimônio Cultural</div>
-                <div class="timeline-institution">Universidade Federal da Bahia (UFBA) · Brasil · 2023–2025</div>
-                <div class="timeline-details">
-                    Título: Ariano Suassuna e a Indústria Cultural: Interfaces entre o Movimento Armorial e a Crítica Filosófica da Escola de Frankfurt<br>
-                    Orientadora: Profa. Dra. Daiane Batista de Jesus
-                </div>
-            </div>
-
-            <!-- Bacharelado -->
-            <div class="timeline-item">
-                <div class="timeline-degree">Bacharelado em Direito</div>
-                <div class="timeline-institution">Centro Universitário Social da Bahia (UNISBA) · Brasil · 2016–2020</div>
-                <div class="timeline-details">
-                    Título: Deus e o Diabo na Terra do Sol: Metáforas Decoloniais para uma Reflexão do Direito em A Pedra do Reino de Ariano Suassuna<br>
-                    Orientadora: Profa. Dra. Marta Regina Gama Gonçalves
-                </div>
-            </div>
-        </div>
+    <div class="hero-links" aria-label="Links acadêmicos e de contato">
+      <a href="mailto:raique.correia@animaeducacao.com.br"><i class="fa-regular fa-envelope"></i> raique.correia@animaeducacao.com.br</a>
+      <a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&amp;hl=pt-BR" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google"></i> Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/Raique-Correia" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+      <a href="https://unifica.academia.edu/RaiqueLucasdeJesusCorreia" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i> Academia.edu</a>
+      <a href="http://dgp.cnpq.br/dgp/espelhorh/0200473611" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i> GPPEC/CNPq</a>
+      <a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-scroll"></i> Lattes</a>
+      <a href="https://orcid.org/0000-0002-0488-3037" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-orcid"></i> ORCID</a>
+      <a href="https://www.cienciavitae.pt/portal/E112-D7F1-7DD6" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> Ciência Vitae</a>
+      <a href="https://www.instagram.com/raiquelucas" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
     </div>
+  </div>
+<aside class="sidebar" aria-label="Informações complementares">
+  <div class="portrait-wrap"><img src="https://wwws.cnpq.br/cvlattesweb/pkg_util_img.show_foto?v_cod=K2780745Z0" alt="Retrato de Raique Lucas de Jesus Correia" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;text-align:center;color:#657789;font-size:.8rem;padding:12px&quot;>Raique Lucas<br>de Jesus Correia</div>'"></div>
+  <section class="side-card contact-card"><h2>Informações de contato</h2><p><i class="fa-regular fa-envelope"></i> <a href="mailto:raique.correia@animaeducacao.com.br">raique.correia@animaeducacao.com.br</a></p><p><i class="fa-solid fa-location-dot"></i> Universidade Salvador (UNIFACS)<br>Salvador, Bahia · Brasil</p><div class="contact-links"><a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer">Lattes</a><a href="https://orcid.org/0000-0002-0488-3037" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&amp;hl=pt-BR" target="_blank" rel="noopener noreferrer">Google Scholar</a></div></section>
+  <section class="side-card current-affiliations"><h2>Vínculos atuais</h2>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-building-columns"></i></div><p><strong>Universidade Salvador · UNIFACS</strong><br>Coordenador dos cursos de Direito e Relações Internacionais; professor da graduação e pesquisador do PPDRU/UNIFACS.</p></div>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-scale-balanced"></i></div><p><strong>Instituto Brasileiro de Direitos Humanos · IBDH</strong><br>Membro do Comitê Executivo desde 2025.</p></div>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-book-open"></i></div><p><strong>RDE · Revista de Desenvolvimento Econômico</strong><br>Secretário Editorial, periódico vinculado ao PPDRU/UNIFACS.</p></div>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-book"></i></div><p><strong>RIBDH · Revista do Instituto Brasileiro de Direitos Humanos</strong><br>Membro da equipe editorial.</p></div>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-earth-americas"></i></div><p><strong>Instituto Jurídico Portucalense · UPT</strong><br>Pesquisador colaborador em projeto internacional de investigação sobre direitos humanos aplicados.</p></div>
+    <div class="side-stat"><div class="number"><i class="fa-solid fa-people-group"></i></div><p><strong>GPPEC · UNIFACS/CNPq</strong><br>Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania; membro do grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).</p></div>
+  </section>
+  <section class="side-card education-card"><h2>Formação</h2>
+    <div class="education-item"><span class="edu-label">Em andamento · 2023–atual</span><strong>Doutorado em Desenvolvimento Regional e Urbano</strong><span class="edu-institution">UNIFACS</span></div>
+    <div class="education-item"><span class="edu-label">Concluído · 2025–2026</span><strong>Doutorado sanduíche</strong><span class="edu-institution">Universidad de Ixtlahuaca CUI · México</span></div>
+    <div class="education-item"><span class="edu-label">Concluído · 2021–2023</span><strong>Mestrado em Desenvolvimento Regional e Urbano</strong><span class="edu-institution">UNIFACS</span></div>
+    <div class="education-item"><span class="edu-label">Concluído · 2023–2025</span><strong>Especialização em Gestão Social e Políticas Públicas do Patrimônio Cultural</strong><span class="edu-institution">UFBA</span></div>
+    <div class="education-item"><span class="edu-label">Em andamento</span><strong>Especialização em Direito Eleitoral</strong><span class="edu-institution">Faculdade Inove Educação (I9)</span></div>
+    <div class="education-item"><span class="edu-label">Em andamento</span><strong>Especialização em Filosofia do Direito e Teoria Geral do Direito</strong><span class="edu-institution">Faculdade Inove Educação (I9)</span></div>
+    <div class="education-item"><span class="edu-label">Concluído · 2016–2020</span><strong>Bacharelado em Direito</strong><span class="edu-institution">UNISBA</span></div>
+    <p class="education-more"><a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer">Ver formação completa no Currículo Lattes ↗</a></p>
+  </section>
+  <section class="side-card guidance-card"><h2>Orientação e colaboração</h2>
+    <div class="guidance-item"><strong>Prof. Dr. José Euclimar Xavier de Menezes</strong><p>Orientador · Universidade Salvador (UNIFACS).</p></div>
+    <div class="guidance-item"><strong>Prof. Dr. Roberto Félix Olivares Gutiérrez</strong><p>Supervisor no México · Universidad de Ixtlahuaca CUI.</p></div>
+    <div class="guidance-item"><strong>Prof. Dr. José Geraldo de Sousa Junior</strong><p>Colaboração acadêmica · Universidade de Brasília (UnB).</p></div>
+  </section>
+  <section class="side-card"><h2>Perfis acadêmicos</h2><ul><li><a href="https://orcid.org/0000-0002-0488-3037" target="_blank" rel="noopener noreferrer">ORCID</a></li><li><a href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&amp;hl=pt-BR" target="_blank" rel="noopener noreferrer">Google Scholar</a></li><li><a href="https://www.researchgate.net/profile/Raique-Correia" target="_blank" rel="noopener noreferrer">ResearchGate</a></li><li><a href="https://unifica.academia.edu/RaiqueLucasdeJesusCorreia" target="_blank" rel="noopener noreferrer">Academia.edu</a></li><li><a href="https://www.cienciavitae.pt/portal/E112-D7F1-7DD6" target="_blank" rel="noopener noreferrer">Ciência Vitae</a></li><li><a href="https://www.instagram.com/raiquelucas" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul></section>
+</aside>
+</header>
 
+<div class="layout" id="conteudo">
+<main class="main-column">
+<section class="section" id="perfil">
+  <div class="section-heading"><div><h2>Biografia</h2></div></div>
+  <div class="bio"><p>Advogado. Coordenador e professor dos Cursos de Direito e Relações Internacionais da Universidade Salvador (UNIFACS). Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH). Doutorando em Desenvolvimento Regional e Urbano pela UNIFACS, com bolsa da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Entre junho de 2025 e junho de 2026, realizou Research Stay (Estancia de Investigación) na Facultad de Derecho da Universidad de Ixtlahuaca CUI (México), com bolsa do Programa de Doutorado Sanduíche no Exterior (PDSE/CAPES). Entre janeiro e abril de 2026, atuou como professor convidado no Instituto de Formación Académica del Centro y Sureste - Universidad INFA (México), ministrando o curso de curta duração "Formación en Cultura Brasileña y Portugués para Estudiantes Extranjeros". Mestre em Desenvolvimento Regional e Urbano pela UNIFACS. Especialista em Políticas Públicas e Patrimônio Cultural pela Universidade Federal da Bahia (UFBA). Bacharel em Direito pelo Centro Universitário Social da Bahia (UNISBA). Secretário Editorial da RDE - Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) da UNIFACS. Membro da Equipe Editorial da RIBDH - Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2). Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq) e membro do Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq). Pesquisador Colaborador em projeto vinculado ao Instituto Jurídico Portucalense (IJP) da Universidade Portucalense Infante D. Henrique (UPT, Portugal). Coordenou, em parceria com o Prof. Dr. José Euclimar Xavier de Menezes, o dossiê "Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade", publicado na CSOnline - Revista Eletrônica de Ciências Sociais (ISSN 1981-2140, Qualis B1), vinculada ao Programa de Pós-Graduação em Ciências Sociais (PPGCSO) da Universidade Federal de Juiz de Fora (UFJF). Foi roteirista e autor do argumento do documentário "Projeto CienciArt V - A Cidade pelo Avesso" (ANCINE CPB n. B25-002217-00000), produção do GPPEC/UNIFACS com financiamento público da Lei Paulo Gustavo (Lei Complementar n. 195/2022), conforme Edital PG02/2023 Produção Audiovisual Web da Secretaria de Cultura do Estado da Bahia (SECULT-BA). Suas linhas de pesquisa e atuação profissional abrangem os seguintes eixos temáticos: Direito Público, Direito Constitucional, Direito Urbanístico e Administrativo, Direitos Humanos e Fundamentais, Metodologia da Pesquisa Jurídica, Patrimônio Cultural e Direitos Culturais.</p></div>
+</section>
+<section class="section" id="publicacoes">
+  <div class="section-heading"><div><h2>Publicações selecionadas</h2></div><a class="text-link" href="https://scholar.google.com.br/citations?user=gWccFswAAAAJ&amp;hl=pt-BR" target="_blank" rel="noopener noreferrer">Ver perfil completo no Google Scholar ↗</a></div>
+  <p class="section-intro">Artigos, livro e coletâneas selecionados. Use a busca para localizar títulos, coautores ou periódicos.</p>
+  <div class="pub-tools"><label class="searchbox"><span class="sr-only">Buscar publicações</span><i class="fa-solid fa-magnifying-glass"></i><input id="pubSearch" type="search" placeholder="Buscar por título, autor ou periódico…" autocomplete="off"></label><button class="filter-btn" data-filter="all" aria-pressed="true">Todas</button><button class="filter-btn" data-filter="artigo" aria-pressed="false">Artigos</button><button class="filter-btn" data-filter="livro" aria-pressed="false">Livros e coletâneas</button></div>
+  <div class="pub-list" id="pubList">
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span><span class="index-tag">Scopus · Web of Science</span></div><h3 class="pub-title">O direito à cidade achado na rua: fundamentos teóricos e perspectivas epistemológicas</h3><p class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</p><div class="pub-journal">Revista Jurídica Portucalense, v. 2, p. 154–184, 2026.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span><span class="index-tag">Web of Science</span></div><h3 class="pub-title">O “direito achado na rua” e os novos “sujeitos coletivos de direito”: a luta social como paradigma do direito à cidade</h3><p class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</p><div class="pub-journal">Direito da Cidade (UERJ), v. 17, p. 282–310, 2025.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span></div><h3 class="pub-title">Os direitos humanos na perspectiva crítica de “O Direito Achado na Rua”</h3><p class="pub-authors">Correia, R. L. J.; Sousa Junior, J. G.; Menezes, J. E. X.</p><div class="pub-journal">Revista do Instituto Brasileiro de Direitos Humanos, v. 24/25, p. 171–192, 2025.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span><span class="index-tag">Web of Science</span></div><h3 class="pub-title">A cidade e o cidadão: por uma abordagem político-territorial do conceito de cidadania a partir de uma perspectiva emancipatória</h3><p class="pub-authors">Correia, R. L. J.; Oliveira Filho, W. A.; Menezes, J. E. X.</p><div class="pub-journal">Revista Geografares (UFES), v. 4, p. 1–40, 2024. Também publicada versão em inglês: “The city and the citizen: for a political-territorial approach to the concept of citizenship from an emancipatory perspective”.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span></div><h3 class="pub-title">Movimentos sociais urbanos e cidadanias periféricas insurgentes. A luta dos moradores do Calabar (Salvador, BA) pelo direito à cidade</h3><p class="pub-authors">Correia, R. L. J.; Souza, G. B. G.; Menezes, J. E. X.</p><div class="pub-journal">Revista Cidades, v. 15, p. 112–152, 2023.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span></div><h3 class="pub-title">Os caminhos incertos do “Direito e Literatura”: perspectivas e potencialidades</h3><p class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.</p><div class="pub-journal">Anamorphosis — Revista Internacional de Direito e Literatura, v. 8, p. 1–33, 2022.</div></article>
+    <article class="pub-item" data-kind="artigo"><div class="pub-meta"><span class="type-tag">Artigo</span></div><h3 class="pub-title">Habermas and the issue of religion in the public space: critical contributions to a new view on State laicity</h3><p class="pub-authors">Correia, R. L. J.; Gonçalves, M. R. G.; Ferreira, F. B.</p><div class="pub-journal">Revista da Faculdade de Direito do Sul de Minas, v. 37, p. 215–238, 2021.</div></article>
+    <article class="pub-item" data-kind="livro"><div class="pub-meta"><span class="type-tag">Livro</span></div><h3 class="pub-title">Direito, literatura &amp; sertão: perspectivas decoloniais a partir do Romance d’A Pedra do Reino de Ariano Suassuna</h3><p class="pub-authors">Correia, R. L. J.</p><div class="pub-journal">Editora Porta, 344 p., 2022. ISBN 9786599907357.</div></article>
+    <article class="pub-item" data-kind="livro"><div class="pub-meta"><span class="type-tag">Coletânea · Organização</span></div><h3 class="pub-title">Diálogos interdisciplinares entre direitos humanos, filosofia &amp; psicanálise: antologia em homenagem aos 30 anos de docência universitária do professor José Euclimar Xavier de Menezes</h3><p class="pub-authors">Correia, R. L. J. (org.); Ferreira, L. E. S. (org.); Barreto Junior, W. D. (org.)</p><div class="pub-journal">Editora Porta, João Pessoa, v. 1, 356 p., 2025. ISBN 9786585633314.</div></article>
+  </div><p class="pub-empty" id="pubEmpty">Nenhuma publicação corresponde à busca.</p>
+</section>
+<section class="section" id="pesquisa">
+  <div class="section-heading"><div><h2>Projetos</h2><p class="section-intro">Principais projetos de investigação e extensão realizados.</p></div></div>
+  <div class="project-list">
+    <article class="project"><span class="project-type">Pesquisa · Internacional</span><h3>Movimientos sociales insurgentes y prácticas contrahegemónicas en la producción del espacio urbano</h3><p>Estudo comparativo dos impactos de movimentos sociais insurgentes em Salvador (Brasil) e Toluca (México), das práticas contra-hegemônicas de produção do espaço urbano e da efetivação da cidadania por meio da luta pelo direito à cidade, no período de 1970 a 2025.</p><div class="project-meta">UNIFACS · Universidad de Ixtlahuaca CUI · 2024–2025 · CAPES/PDSE</div></article>
+    <article class="project"><span class="project-type">Pesquisa</span><h3>Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade</h3><p>Investigação sobre a materialização dos direitos humanos na cidade e na prisão, com atenção às periferias urbanas e à relação com a densidade demográfica do sistema prisional.</p><div class="project-meta">Universidade Portucalense · Instituto Jurídico Portucalense · 2023–2024</div></article>
+    <article class="project"><span class="project-type">Pesquisa</span><h3>Indicadores de Cidadania e Políticas Públicas</h3><p>Investigação sobre demandas e conflitos envolvendo práticas políticas em direitos humanos na contemporaneidade, com ênfase em vulnerabilidade, relações de gênero, violência policial e desigualdades regionais e socioeconômicas.</p><div class="project-meta">UNIFACS · Ministério Público da Bahia · Universidade Portucalense · Universidad de Salamanca · 2021–2022</div></article>
+    <article class="project"><span class="project-type">Extensão · Audiovisual</span><h3>Projeto CienciArt V — A Cidade pelo Avesso</h3><p>Documentário que dá visibilidade às vozes das periferias urbanas e às formas pelas quais sujeitos periféricos recriam o espaço por meio da resistência cultural, de manifestações simbólicas e da criação artística.</p><div class="project-meta">GPPEC/UNIFACS · SECULT-BA · Lei Paulo Gustavo</div></article>
+    <article class="project"><span class="project-type">Extensão</span><h3>Favela em Movimento: Experiências Populares Emancipatórias e Práticas Políticas de Cidadania em Territórios Periféricos</h3><p>Projeto desenvolvido a partir da inserção no bairro do Calabar, em Salvador, sobre a contribuição dos movimentos sociais e sujeitos coletivos para novas práticas de cidadania e efetivação de direitos, em diálogo com “O Direito Achado na Rua”.</p><div class="project-meta">UNIFACS · GPPEC · 2023–2024</div></article>
+  </div>
+</section>
+<section class="section" id="docencia">
+  <div class="section-heading"><div><h2>Docência e internacionalização</h2></div></div>
+  <div class="timeline">
+    <article class="timeline-item"><span class="meta">2026–atual</span><h3>Coordenador dos cursos de Direito e Relações Internacionais</h3><p>Universidade Salvador (UNIFACS), Faculdade de Direito — Campus Tancredo Neves, Salvador, Brasil.</p></article>
+    <article class="timeline-item"><span class="meta">2025–atual</span><h3>Professor universitário</h3><p>Universidade Salvador (UNIFACS). Atuação na graduação em Direito; disciplinas registradas no Lattes: Estado, Política e Direito; Constituição, Democracia e Meio Ambiente.</p></article>
+    <article class="timeline-item"><span class="meta">Jan.–abr. 2026</span><h3>Professor convidado</h3><p>Instituto de Formación Académica del Centro y Sureste — Universidad INFA, México. Curso de curta duração “Formación en Cultura Brasileña y Portugués para Estudiantes Extranjeros”.</p></article>
+    <article class="timeline-item"><span class="meta">Jun. 2025–jun. 2026</span><h3>Research Stay · Pesquisador visitante</h3><p>Facultad de Derecho, Universidad de Ixtlahuaca CUI, México. Estância vinculada ao doutorado e financiada pelo PDSE/CAPES; pesquisa na linha “Estado Mexicano y Justicia Social”.</p></article>
+    <article class="timeline-item"><span class="meta">2023–atual</span><h3>Pesquisador colaborador</h3><p>Instituto Jurídico Portucalense (IJP), Universidade Portucalense Infante D. Henrique, Portugal. Projeto “Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade”.</p></article>
+    <article class="timeline-item"><span class="meta">2024–2025</span><h3>Tutor de iniciação científica · PIBIC/UNIFACS</h3><p>Acompanhamento de pesquisadores juniores em projetos de iniciação científica do curso de Direito.</p></article>
+  </div>
+</section>
+<section class="section" id="formacao">
+  <div class="section-heading"><div><h2>Formação</h2></div></div>
+  <div class="timeline">
+    <article class="timeline-item"><span class="meta">2023–atual · Doutorado</span><h3>Desenvolvimento Regional e Urbano</h3><p>Universidade Salvador (UNIFACS), Brasil · Bolsa CAPES/PROSUP.</p><p><strong>Pesquisa:</strong> “Direito à Cidade Achado na Rua: Constitucionalismo Participativo, Movimentos Sociais Urbanos e a Produção de Novas Juridi(Cidades) no Contexto Periférico Latino-Americano”. Orientador: Prof. Dr. José Euclimar Xavier de Menezes.</p></article>
+    <article class="timeline-item sandwich-study"><span class="meta">Junho de 2025 – junho de 2026 · Doutorado sanduíche / Research Stay</span><h3>Facultad de Derecho · Universidad de Ixtlahuaca CUI</h3><p><strong>Facultad de Derecho · México · Bolsa PDSE/CAPES.</strong> Research Stay realizado entre junho de 2025 e junho de 2026, como etapa internacional do doutorado em Desenvolvimento Regional e Urbano da UNIFACS.</p><p><strong>Projeto de pesquisa:</strong> “Movimientos sociales insurgentes y prácticas contrahegemónicas en la producción del espacio urbano. Los derechos desde la calle: análisis comparativo entre Toluca (México) y Salvador (Brasil)”.</p><p><strong>Supervisor no México:</strong> Prof. Dr. Roberto Félix Olivares Gutiérrez. <strong>Orientador no Brasil:</strong> Prof. Dr. José Euclimar Xavier de Menezes.</p></article>
+    <article class="timeline-item"><span class="meta">2021–2023 · Mestrado</span><h3>Desenvolvimento Regional e Urbano</h3><p>Universidade Salvador (UNIFACS), Brasil · Bolsa CAPES/PROSUP.</p><p><strong>Dissertação:</strong> “Cidadania e Territorialidade Periférica: A Luta pelo Direito à Cidade na Comunidade do Calabar em Salvador, Bahia, Brasil”. Orientador: Prof. Dr. José Euclimar Xavier de Menezes.</p></article>
+    <article class="timeline-item"><span class="meta">2023–2025 · Especialização</span><h3>Gestão Social e Políticas Públicas do Patrimônio Cultural</h3><p>Universidade Federal da Bahia (UFBA), Brasil. Trabalho: “Ariano Suassuna e a Indústria Cultural: Interfaces entre o Movimento Armorial e a Crítica Filosófica da Escola de Frankfurt”.</p></article>
+    <article class="timeline-item"><span class="meta">Em andamento · Especialização</span><h3>Direito Eleitoral</h3><p>Faculdade Inove Educação (I9), Brasil.</p></article>
+    <article class="timeline-item"><span class="meta">Em andamento · Especialização</span><h3>Filosofia do Direito e Teoria Geral do Direito</h3><p>Faculdade Inove Educação (I9), Brasil.</p></article>
+    <article class="timeline-item"><span class="meta">2016–2020 · Graduação</span><h3>Bacharelado em Direito</h3><p>Centro Universitário Social da Bahia (UNISBA), Brasil. Trabalho: “Deus e o Diabo na Terra do Sol: Metáforas Decoloniais para uma Reflexão do Direito em A Pedra do Reino de Ariano Suassuna”.</p></article>
+  </div>
+</section>
+<section class="section" id="atuacao">
+  <div class="section-heading"><div><h2>Áreas de atuação</h2></div></div>
+  <div class="tag-cloud">
+    <span class="tag">Direito Público</span><span class="tag">Direito Constitucional</span><span class="tag">Direito Urbanístico e Administrativo</span><span class="tag">Direitos Humanos e Fundamentais</span><span class="tag">Metodologia da Pesquisa Jurídica</span><span class="tag">Patrimônio Cultural e Direitos Culturais</span>
+  </div>
+</section>
+<section class="section" id="servico">
+  <div class="section-heading"><div><h2>Atuação institucional</h2></div></div>
+  <details><summary>Editorias e periódicos científicos</summary><div class="details-content"><ul><li><strong>Secretário Editorial</strong> — RDE, Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao PPDRU/UNIFACS.</li><li><strong>Membro da Equipe Editorial</strong> — RIBDH, Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2).</li><li><strong>Coordenação de dossiê</strong> — “Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade”, com o Prof. Dr. José Euclimar Xavier de Menezes, publicado na CSOnline/UFJF (ISSN 1981-2140, Qualis B1).</li></ul></div></details>
+  <details><summary>Grupos de pesquisa</summary><div class="details-content"><ul><li><strong>Vice-líder</strong> — Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq).</li><li><strong>Membro</strong> — Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq).</li></ul><p><a href="http://dgp.cnpq.br/dgp/espelhorh/0200473611" target="_blank" rel="noopener noreferrer">Consultar grupo no Diretório do CNPq ↗</a></p></div></details>
+  <details><summary>Congressos e eventos internacionais</summary><div class="details-content"><ul><li>Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos e Cidadania, Universidade Portucalense Infante D. Henrique (Portugal).</li><li>Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos Aplicados, Universidad de Salamanca (Espanha).</li></ul></div></details>
+  <details><summary>Bolsas, prêmios e distinções</summary><div class="details-content"><ul><li>Bolsa CAPES/PROSUP no mestrado (2021–2023) e doutorado (2023–atual).</li><li>Bolsa CAPES/PDSE para estágio de pesquisa no exterior.</li><li><strong>2023:</strong> 1º lugar no Concurso de Dissertação de Mestrado da Rede de Pesquisa em Direito da Cidade, VI Congresso Nacional de Direito da Cidade.</li><li><strong>2019:</strong> Prêmio de Melhor Apresentação em formato banner, XVII Semana Acadêmica do Centro Universitário Social da Bahia.</li><li><strong>2018 e 2017:</strong> Projeto de Pesquisa de Destaque nas XVI e XV Jornadas Científicas da Faculdade Social da Bahia.</li></ul></div></details>
+  <details><summary>Formação complementar selecionada</summary><div class="details-content"><ul><li>Formação urbana e condicionantes da produção do espaço no Brasil — aluno especial, PPGAU/FAUUSP (2021.2).</li><li>Cidade e Espaço Urbano — aluno especial, POSGEO/UFBA (2022.1).</li><li>Direito à Cidade: Participação, Lutas Políticas e Democracia — aluno extensionista, IPOL/UnB (2022.1).</li><li>Formação docente para professores de Direito — FGV (2021).</li><li>Panorama Teórico dos Direitos Humanos no Brasil — ENAP (2022).</li></ul><p>Para a relação completa de cursos, consulte o <a href="http://lattes.cnpq.br/6550456476074625" target="_blank" rel="noopener noreferrer">Currículo Lattes</a>.</p></div></details>
+</section>
+</main>
 
-            <div class="sidebar-card">
-                <h3>Áreas de Atuação</h3>
-                <div>
-                    <span class="interest-tag">Direitos Humanos e Cidadania</span>
-                    <span class="interest-tag">Garantias Fundamentais e Direito Constitucional</span>
-                    <span class="interest-tag">Direito Urbanístico e Direito à Cidade</span>
-                    <span class="interest-tag">Educação Jurídica</span>
-                    <span class="interest-tag">Direito e Arte</span>
-                    <span class="interest-tag">Direito e Literatura</span>
-                    <span class="interest-tag">Direitos Culturais e Patrimônio Cultural</span>
-                    <span class="interest-tag">Sociologia e Antropologia Jurídicas</span>
-                    <span class="interest-tag">Metodologia e Epistemologia das Ciências Jurídicas e Sociais</span>
-                    <span class="interest-tag">Teoria e Filosofia do Direito</span>
-                </div>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>Orientação e Colaboradores</h3>
-                <div class="advisor-card">
-                    <span class="advisor-name">Orientador principal</span><br>
-                    Prof. Dr. José Euclimar Xavier de Menezes (UNIFACS)
-                </div>
-                <div class="advisor-card">
-                    <span class="advisor-name">Coorientador (México)</span><br>
-                    Prof. Dr. Roberto Félix Olivares Gutiérrez (UICUI)
-                </div>
-                <div class="advisor-card">
-                    <span class="advisor-name">Colaborador</span><br>
-                    Prof. Dr. José Geraldo de Sousa Junior (UnB)
-                </div>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>Grupos de Pesquisa</h3>
-                <div class="research-group-card">
-                    <div class="research-group-title"><i class="fas fa-users" style="margin-right: 0.5rem; color:#9b2e2a;"></i> Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC)</div>
-                    <div class="research-group-detail">Universidade Salvador (UNIFACS) · Vice-líder</div>
-                </div>
-                <div class="research-group-card">
-                    <div class="research-group-title"><i class="fas fa-gavel" style="margin-right: 0.5rem; color:#9b2e2a;"></i> Grupo de Pesquisa O Direito Achado na Rua (ODAnR)</div>
-                    <div class="research-group-detail">Universidade de Brasília (UnB) · Membro</div>
-                </div>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>Bolsas e Financiamentos</h3>
-                <div class="edu-meta"><i class="fas fa-check-circle" style="color: #9b2e2a;"></i> Bolsista CAPES/PROSUP (Mestrado e Doutorado)</div>
-                <div class="edu-meta" style="margin-top: 0.3rem;"><i class="fas fa-check-circle" style="color: #9b2e2a;"></i> Bolsista CAPES/PDSE – Doutorado Sanduíche no Exterior</div>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>Prêmios e Títulos</h3>
-                <div class="prize-item"><strong>2023</strong><br>1º Lugar - Concurso de Dissertação de Mestrado, Rede de Pesquisa em Direito da Cidade (VI Congresso Nacional de Direito da Cidade).</div>
-                <div class="prize-item"><strong>2019</strong><br>Prêmio de Melhor Apresentação no Formato Banner da XVII Semana Acadêmica do Centro Universitário Social da Bahia.</div>
-                <div class="prize-item"><strong>2018</strong><br>Projeto de Pesquisa de Destaque na XVI Jornada Científica da Faculdade Social da Bahia.</div>
-                <div class="prize-item"><strong>2017</strong><br>Projeto de Pesquisa de Destaque na XV Jornada Científica da Faculdade Social da Bahia.</div>
-            </div>
-
-            <div class="sidebar-card">
-                <h3>Formação Complementar</h3>
-                <div class="complement-item">Aluno especial - PPGAU/FAUUSP (2021.2) - "Formação urbana e condicionantes da produção do espaço no Brasil"</div>
-                <div class="complement-item">Aluno especial - POSGEO/UFBA (2022.1) - "Cidade e Espaço Urbano"</div>
-                <div class="complement-item">Aluno extensionista - IPOL/UnB (2022.1) - "Direito à Cidade: Participação, Lutas Políticas e Democracia"</div>
-                <div class="complement-item">Grupo de Pesquisa em Direitos das Minorias (LAEJU-BA, 2021-2022)</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-note">
-        <i class="far fa-copyright"></i> Faculdade de Direito da Universidade Salvador (UNIFACS)
-        <div class="social-links">
-            <a href="https://www.instagram.com/raiquelucas" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
 </div>
-
+<footer class="footer"><span>© <span id="year"></span> Raique Lucas de Jesus Correia</span><span>Perfil acadêmico · Atualizado em outubro de 2026 · <a href="#inicio">Voltar ao início ↑</a></span></footer>
+</div>
+<button class="back-top" id="backTop" aria-label="Voltar ao início" title="Voltar ao início"><i class="fa-solid fa-arrow-up"></i></button>
 <script>
-    (function() {
-        // Fallback para imagem com problema de carregamento
-        var img = document.getElementById('profileImg');
-        var fallbackDiv = document.getElementById('fallbackContent');
-        if (img && fallbackDiv) {
-            img.onerror = function() {
-                img.style.display = 'none';
-                fallbackDiv.style.display = 'flex';
-            };
-            // Se a imagem já tiver falhado antes do evento ser registrado
-            if (!img.complete || img.naturalWidth === 0) {
-                setTimeout(function() {
-                    if (img.naturalWidth === 0 && img.style.display !== 'none') {
-                        img.style.display = 'none';
-                        if (fallbackDiv) fallbackDiv.style.display = 'flex';
-                    }
-                }, 2000);
-            }
-        }
+(function(){
+ const search=document.getElementById('pubSearch');
+ const items=[...document.querySelectorAll('.pub-item')];
+ const empty=document.getElementById('pubEmpty');
+ let filter='all';
+ function updatePublications(){
+   const query=(search.value||'').toLocaleLowerCase('pt-BR');
+   let visible=0;
+   items.forEach(item=>{
+     const matchesText=item.textContent.toLocaleLowerCase('pt-BR').includes(query);
+     const matchesFilter=filter==='all'||item.dataset.kind===filter;
+     item.hidden=!(matchesText&&matchesFilter);
+     if(!item.hidden) visible++;
+   });
+   empty.style.display=visible?'none':'block';
+ }
+ search.addEventListener('input',updatePublications);
+ document.querySelectorAll('[data-filter]').forEach(button=>{
+   button.addEventListener('click',()=>{
+     filter=button.dataset.filter;
+     document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+     updatePublications();
+   });
+ });
+ const navLinks=[...document.querySelectorAll('.nav-inner a')];
+ const sections=navLinks.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+ if('IntersectionObserver' in window){
+   const observer=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>{
+       if(entry.isIntersecting){
+         navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));
+       }
+     });
+   },{rootMargin:'-25% 0px -65% 0px'});
+   sections.forEach(section=>observer.observe(section));
+ }
+ const backTop=document.getElementById('backTop');
+ window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>550),{passive:true});
+ backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+ document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+<script>
+const translations = {"en":{"Pular para o conteúdo":"Skip to content","Currículo Lattes":"Lattes CV","Perfil":"Profile","Publicações":"Publications","Projetos":"Projects","Áreas de atuação":"Areas of expertise","Formação":"Education","Serviço acadêmico":"Academic service","Início":"Home","Perfil acadêmico":"Academic profile","Coordenador e professor da Faculdade de Direito e de Relações Internacionais da Universidade Salvador (UNIFACS) · Brasil":"Coordinator and professor at the Faculties of Law and International Relations, Universidade Salvador (UNIFACS) · Brazil","Advogado inscrito na Ordem dos Advogados do Brasil — Seccional Bahia (OAB/BA) · Brasil":"Attorney admitted to the Brazilian Bar Association — Bahia Section (OAB/BA) · Brazil","Doutorando em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)":"PhD candidate in Regional and Urban Development · UNIFACS (Brazil)","Doutorado Sanduíche · Facultad de Derecho · Universidad de Ixtlahuacua CUI (México)":"Visiting doctoral researcher · Faculty of Law · Universidad de Ixtlahuaca CUI (Mexico)","Mestre em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)":"MA in Regional and Urban Development · UNIFACS (Brazil)","Especialista em Políticas Públicas e Patrimônio Cultural · UFBA (Brasil)":"Specialist in Public Policy and Cultural Heritage · UFBA (Brazil)","Graduado em Direito · UNISBA (Brasil)":"Bachelor of Laws · UNISBA (Brazil)","Informações de contato":"Contact information","Vínculos atuais":"Current affiliations","Orientação e colaboração":"Supervision and collaboration","Perfis acadêmicos":"Academic profiles","Biografia":"Biography","Publicações selecionadas":"Selected publications","Artigos, livro e coletâneas selecionados. Use a busca para localizar títulos, coautores ou periódicos.":"Selected articles, book, and edited collections. Search by title, co-author, or journal.","Buscar publicações":"Search publications","Todas":"All","Artigos":"Articles","Livros e coletâneas":"Books and edited collections","Nenhuma publicação corresponde à busca.":"No publications match your search.","Principais projetos de investigação e extensão realizados.":"Selected research and community outreach projects.","Pesquisa · Internacional":"Research · International","Pesquisa":"Research","Extensão · Audiovisual":"Outreach · Audiovisual","Extensão":"Outreach","Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade":"Applied Human Rights in the Context of Prisons and the City","Investigação sobre a materialização dos direitos humanos na cidade e na prisão, com atenção às periferias urbanas e à relação com a densidade demográfica do sistema prisional.":"Research on human rights in cities and prisons, focusing on urban peripheries and prison population density.","Indicadores de Cidadania e Políticas Públicas":"Citizenship and Public Policy Indicators","Projeto CienciArt V — A Cidade pelo Avesso":"CienciArt V Project — The City Inside Out","Docência e internacionalização":"Teaching and internationalization","Coordenador dos cursos de Direito e Relações Internacionais":"Coordinator of the Law and International Relations programs","Professor universitário":"University professor","Professor convidado":"Guest lecturer","Pesquisador colaborador":"Research collaborator","Tutor de iniciação científica · PIBIC/UNIFACS":"Undergraduate research mentor · PIBIC/UNIFACS","Em andamento":"In progress","Concluído":"Completed","Mestrado":"Master’s degree","Doutorado":"Doctoral degree","Especialização":"Specialization","Graduação":"Undergraduate degree","Bacharelado em Direito":"Bachelor of Laws","Atuação institucional":"Institutional service","Voltar ao início ↑":"Back to top ↑","Direito Público":"Public Law","Direito Constitucional":"Constitutional Law","Direito Urbanístico e Administrativo":"Urban and Administrative Law","Direitos Humanos e Fundamentais":"Human and Fundamental Rights","Metodologia da Pesquisa Jurídica":"Legal Research Methodology","Patrimônio Cultural e Direitos Culturais":"Cultural Heritage and Cultural Rights","Ver formação completa no Currículo Lattes ↗":"View full education record on Lattes ↗","Consultar grupo no Diretório do CNPq ↗":"View research group in the CNPq Directory ↗","Universidade Salvador · UNIFACS Coordenador dos cursos de Direito e Relações Internacionais; professor da graduação e pesquisador do PPDRU/UNIFACS.":"Universidade Salvador · UNIFACS Coordinator of the Law and International Relations programs; undergraduate professor and researcher at PPDRU/UNIFACS.","Instituto Brasileiro de Direitos Humanos · IBDH Membro do Comitê Executivo desde 2025.":"Brazilian Institute of Human Rights · IBDH Executive Committee member since 2025.","RDE · Revista de Desenvolvimento Econômico Secretário Editorial, periódico vinculado ao PPDRU/UNIFACS.":"RDE · Journal of Economic Development Editorial Secretary; journal affiliated with PPDRU/UNIFACS.","RIBDH · Revista do Instituto Brasileiro de Direitos Humanos Membro da equipe editorial.":"RIBDH · Journal of the Brazilian Institute of Human Rights Member of the editorial team.","Instituto Jurídico Portucalense · UPT Pesquisador colaborador em projeto internacional de investigação sobre direitos humanos aplicados.":"Portucalense Legal Institute · UPT Research collaborator in an international project on applied human rights.","GPPEC · UNIFACS/CNPq Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania; membro do grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).":"GPPEC · UNIFACS/CNPq Deputy leader of the Citizenship Policies and Epistemes Research Group; member of the O Direito Achado na Rua group (ODAnR/UnB/CNPq).","Orientador · Universidade Salvador (UNIFACS).":"Advisor · Universidade Salvador (UNIFACS).","Supervisor no México · Universidad de Ixtlahuaca CUI.":"Supervisor in Mexico · Universidad de Ixtlahuaca CUI.","Colaboração acadêmica · Universidade de Brasília (UnB).":"Academic collaboration · University of Brasília (UnB).","Ver perfil completo no Google Scholar ↗":"View full profile on Google Scholar ↗","Coletânea · Organização":"Edited volume · Editor","Artigo":"Article","Livro":"Book","Artigo, livro e coletâneas selecionados. Use a busca para localizar títulos, coautores ou periódicos.":"Selected articles, book, and edited volumes. Search for titles, co-authors, or journals.","Investigação sobre demandas e conflitos envolvendo práticas políticas em direitos humanos na contemporaneidade, com ênfase em vulnerabilidade, relações de gênero, violência policial e desigualdades regionais e socioeconômicas.":"Research on contemporary demands and conflicts involving political practices in human rights, focusing on vulnerability, gender relations, police violence, and regional and socioeconomic inequalities.","Documentário que dá visibilidade às vozes das periferias urbanas e às formas pelas quais sujeitos periféricos recriam o espaço por meio da resistência cultural, de manifestações simbólicas e da criação artística.":"A documentary highlighting the voices of urban peripheries and how peripheral communities remake space through cultural resistance, symbolic expression, and artistic creation.","Projeto desenvolvido a partir da inserção no bairro do Calabar, em Salvador, sobre a contribuição dos movimentos sociais e sujeitos coletivos para novas práticas de cidadania e efetivação de direitos, em diálogo com “O Direito Achado na Rua”.":"A project rooted in the Calabar neighborhood of Salvador, examining how social movements and collective actors contribute to new practices of citizenship and the realization of rights, in dialogue with “O Direito Achado na Rua.”","Universidade Salvador (UNIFACS), Faculdade de Direito — Campus Tancredo Neves, Salvador, Brasil.":"Universidade Salvador (UNIFACS), School of Law — Tancredo Neves Campus, Salvador, Brazil.","Universidade Salvador (UNIFACS). Atuação na graduação em Direito; disciplinas registradas no Lattes: Estado, Política e Direito; Constituição, Democracia e Meio Ambiente.":"Universidade Salvador (UNIFACS). Undergraduate teaching in Law; courses listed in Lattes: State, Politics and Law; Constitution, Democracy and the Environment.","Facultad de Derecho, Universidad de Ixtlahuaca CUI, México. Estância vinculada ao doutorado e financiada pelo PDSE/CAPES; pesquisa na linha “Estado Mexicano y Justicia Social”.":"Faculty of Law, Universidad de Ixtlahuaca CUI, Mexico. Doctoral research stay funded by PDSE/CAPES; research in the area “Mexican State and Social Justice.”","Acompanhamento de pesquisadores juniores em projetos de iniciação científica do curso de Direito.":"Mentoring junior researchers in undergraduate research projects in the Law program.","Para a relação completa de cursos, consulte o Currículo Lattes .":"For the complete list of courses, consult the Lattes CV.","© Raique Lucas de Jesus Correia":"© Raique Lucas de Jesus Correia","Perfil acadêmico · Atualizado em outubro de 2026 · Voltar ao início ↑":"Academic profile · Updated October 2026 · Back to top ↑","Em andamento · 2023–atual":"In progress · 2023–present","Concluído · 2025–2026":"Completed · 2025–2026","Concluído · 2021–2023":"Completed · 2021–2023","Concluído · 2023–2025":"Completed · 2023–2025","Concluído · 2016–2020":"Completed · 2016–2020","Junho de 2025 – junho de 2026 · Doutorado sanduíche / Research Stay":"June 2025 – June 2026 · Visiting doctoral research stay","2023–atual · Doutorado":"2023–present · Doctorate","2021–2023 · Mestrado":"2021–2023 · Master’s degree","2023–2025 · Especialização":"2023–2025 · Specialization","2016–2020 · Graduação":"2016–2020 · Undergraduate degree","Em andamento · Especialização":"In progress · Specialization"},"es":{"Pular para o conteúdo":"Saltar al contenido","Currículo Lattes":"CV Lattes","Perfil":"Perfil","Publicações":"Publicaciones","Projetos":"Proyectos","Áreas de atuação":"Áreas de especialidad","Formação":"Formación","Serviço acadêmico":"Servicio académico","Início":"Inicio","Perfil acadêmico":"Perfil académico","Coordenador e professor da Faculdade de Direito e de Relações Internacionais da Universidade Salvador (UNIFACS) · Brasil":"Coordinador y profesor de las Facultades de Derecho y Relaciones Internacionales de la Universidade Salvador (UNIFACS) · Brasil","Advogado inscrito na Ordem dos Advogados do Brasil — Seccional Bahia (OAB/BA) · Brasil":"Abogado inscrito en la Orden de Abogados de Brasil — Sección de Bahía (OAB/BA) · Brasil","Doutorando em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)":"Doctorando en Desarrollo Regional y Urbano · UNIFACS (Brasil)","Doutorado Sanduíche · Facultad de Derecho · Universidad de Ixtlahuacua CUI (México)":"Estancia doctoral de investigación · Facultad de Derecho · Universidad de Ixtlahuaca CUI (México)","Mestre em Desenvolvimento Regional e Urbano · UNIFACS (Brasil)":"Máster en Desarrollo Regional y Urbano · UNIFACS (Brasil)","Especialista em Políticas Públicas e Patrimônio Cultural · UFBA (Brasil)":"Especialista en Políticas Públicas y Patrimonio Cultural · UFBA (Brasil)","Graduado em Direito · UNISBA (Brasil)":"Graduado en Derecho · UNISBA (Brasil)","Informações de contato":"Información de contacto","Vínculos atuais":"Vínculos actuales","Orientação e colaboração":"Dirección y colaboración","Perfis acadêmicos":"Perfiles académicos","Biografia":"Biografía","Publicações selecionadas":"Publicaciones seleccionadas","Artigos, livro e coletâneas selecionados. Use a busca para localizar títulos, coautores ou periódicos.":"Selección de artículos, libro y obras colectivas. Busque por título, coautor o revista.","Buscar publicações":"Buscar publicaciones","Todas":"Todas","Artigos":"Artículos","Livros e coletâneas":"Libros y obras colectivas","Nenhuma publicação corresponde à busca.":"Ninguna publicación coincide con la búsqueda.","Principais projetos de investigação e extensão realizados.":"Principales proyectos de investigación y extensión realizados.","Pesquisa · Internacional":"Investigación · Internacional","Pesquisa":"Investigación","Extensão · Audiovisual":"Extensión · Audiovisual","Extensão":"Extensión","Dos Direitos Humanos Aplicados no Contexto do Cárcere e da Cidade":"Derechos humanos aplicados en el contexto de la prisión y la ciudad","Investigação sobre a materialização dos direitos humanos na cidade e na prisão, com atenção às periferias urbanas e à relação com a densidade demográfica do sistema prisional.":"Investigación sobre los derechos humanos en la ciudad y en prisión, con atención a las periferias urbanas y a la densidad de población penitenciaria.","Indicadores de Cidadania e Políticas Públicas":"Indicadores de ciudadanía y políticas públicas","Projeto CienciArt V — A Cidade pelo Avesso":"Proyecto CienciArt V — La ciudad al revés","Docência e internacionalização":"Docencia e internacionalización","Coordenador dos cursos de Direito e Relações Internacionais":"Coordinador de los programas de Derecho y Relaciones Internacionales","Professor universitário":"Profesor universitario","Professor convidado":"Profesor invitado","Pesquisador colaborador":"Investigador colaborador","Tutor de iniciação científica · PIBIC/UNIFACS":"Tutor de iniciación científica · PIBIC/UNIFACS","Em andamento":"En curso","Concluído":"Finalizado","Mestrado":"Máster","Doutorado":"Doctorado","Especialização":"Especialización","Graduação":"Grado","Bacharelado em Direito":"Licenciatura en Derecho","Atuação institucional":"Actividad institucional","Voltar ao início ↑":"Volver al inicio ↑","Direito Público":"Derecho público","Direito Constitucional":"Derecho constitucional","Direito Urbanístico e Administrativo":"Derecho urbanístico y administrativo","Direitos Humanos e Fundamentais":"Derechos humanos y fundamentales","Metodologia da Pesquisa Jurídica":"Metodología de la investigación jurídica","Patrimônio Cultural e Direitos Culturais":"Patrimonio cultural y derechos culturales","Ver formação completa no Currículo Lattes ↗":"Ver formación completa en el CV Lattes ↗","Consultar grupo no Diretório do CNPq ↗":"Consultar el grupo en el Directorio del CNPq ↗","Universidade Salvador · UNIFACS Coordenador dos cursos de Direito e Relações Internacionais; professor da graduação e pesquisador do PPDRU/UNIFACS.":"Universidade Salvador · UNIFACS Coordinador de los programas de Derecho y Relaciones Internacionales; profesor de grado e investigador del PPDRU/UNIFACS.","Instituto Brasileiro de Direitos Humanos · IBDH Membro do Comitê Executivo desde 2025.":"Instituto Brasileño de Derechos Humanos · IBDH Miembro del Comité Ejecutivo desde 2025.","RDE · Revista de Desenvolvimento Econômico Secretário Editorial, periódico vinculado ao PPDRU/UNIFACS.":"RDE · Revista de Desarrollo Económico Secretario editorial; revista vinculada al PPDRU/UNIFACS.","RIBDH · Revista do Instituto Brasileiro de Direitos Humanos Membro da equipe editorial.":"RIBDH · Revista del Instituto Brasileño de Derechos Humanos Miembro del equipo editorial.","Instituto Jurídico Portucalense · UPT Pesquisador colaborador em projeto internacional de investigação sobre direitos humanos aplicados.":"Instituto Jurídico Portucalense · UPT Investigador colaborador en un proyecto internacional sobre derechos humanos aplicados.","GPPEC · UNIFACS/CNPq Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania; membro do grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).":"GPPEC · UNIFACS/CNPq Vicedirector del Grupo de Investigación Políticas y Epistemes de la Ciudadanía; miembro del grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).","Orientador · Universidade Salvador (UNIFACS).":"Director de tesis · Universidade Salvador (UNIFACS).","Supervisor no México · Universidad de Ixtlahuaca CUI.":"Supervisor en México · Universidad de Ixtlahuaca CUI.","Colaboração acadêmica · Universidade de Brasília (UnB).":"Colaboración académica · Universidad de Brasilia (UnB).","Ver perfil completo no Google Scholar ↗":"Ver perfil completo en Google Scholar ↗","Coletânea · Organização":"Obra colectiva · Edición","Artigo":"Artículo","Livro":"Libro","Artigo, livro e coletâneas selecionados. Use a busca para localizar títulos, coautores ou periódicos.":"Selección de artículos, libro y obras colectivas. Busque títulos, coautores o revistas.","Investigação sobre demandas e conflitos envolvendo práticas políticas em direitos humanos na contemporaneidade, com ênfase em vulnerabilidade, relações de gênero, violência policial e desigualdades regionais e socioeconômicas.":"Investigación sobre demandas y conflictos contemporáneos relacionados con prácticas políticas en derechos humanos, con énfasis en vulnerabilidad, relaciones de género, violencia policial y desigualdades regionales y socioeconómicas.","Documentário que dá visibilidade às vozes das periferias urbanas e às formas pelas quais sujeitos periféricos recriam o espaço por meio da resistência cultural, de manifestações simbólicas e da criação artística.":"Documental que visibiliza las voces de las periferias urbanas y las formas en que sus habitantes recrean el espacio mediante la resistencia cultural, las expresiones simbólicas y la creación artística.","Projeto desenvolvido a partir da inserção no bairro do Calabar, em Salvador, sobre a contribuição dos movimentos sociais e sujeitos coletivos para novas práticas de cidadania e efetivação de direitos, em diálogo com “O Direito Achado na Rua”.":"Proyecto desarrollado a partir del trabajo en el barrio de Calabar, en Salvador, sobre la contribución de los movimientos sociales y los sujetos colectivos a nuevas prácticas de ciudadanía y a la efectividad de los derechos, en diálogo con “O Direito Achado na Rua”.","Universidade Salvador (UNIFACS), Faculdade de Direito — Campus Tancredo Neves, Salvador, Brasil.":"Universidade Salvador (UNIFACS), Facultad de Derecho — Campus Tancredo Neves, Salvador, Brasil.","Universidade Salvador (UNIFACS). Atuação na graduação em Direito; disciplinas registradas no Lattes: Estado, Política e Direito; Constituição, Democracia e Meio Ambiente.":"Universidade Salvador (UNIFACS). Docencia de grado en Derecho; asignaturas registradas en Lattes: Estado, Política y Derecho; Constitución, Democracia y Medio Ambiente.","Facultad de Derecho, Universidad de Ixtlahuaca CUI, México. Estância vinculada ao doutorado e financiada pelo PDSE/CAPES; pesquisa na linha “Estado Mexicano y Justicia Social”.":"Facultad de Derecho, Universidad de Ixtlahuaca CUI, México. Estancia de investigación doctoral financiada por PDSE/CAPES; investigación en la línea “Estado Mexicano y Justicia Social”.","Acompanhamento de pesquisadores juniores em projetos de iniciação científica do curso de Direito.":"Acompañamiento de investigadores jóvenes en proyectos de iniciación científica del programa de Derecho.","Para a relação completa de cursos, consulte o Currículo Lattes .":"Para consultar la lista completa de cursos, visite el CV Lattes.","© Raique Lucas de Jesus Correia":"© Raique Lucas de Jesus Correia","Perfil acadêmico · Atualizado em outubro de 2026 · Voltar ao início ↑":"Perfil académico · Actualizado en octubre de 2026 · Volver al inicio ↑","Em andamento · 2023–atual":"En curso · 2023–actualidad","Concluído · 2025–2026":"Finalizado · 2025–2026","Concluído · 2021–2023":"Finalizado · 2021–2023","Concluído · 2023–2025":"Finalizado · 2023–2025","Concluído · 2016–2020":"Finalizado · 2016–2020","Junho de 2025 – junho de 2026 · Doutorado sanduíche / Research Stay":"Junio de 2025 – junio de 2026 · Estancia doctoral de investigación","2023–atual · Doutorado":"2023–actualidad · Doctorado","2021–2023 · Mestrado":"2021–2023 · Máster","2023–2025 · Especialização":"2023–2025 · Especialización","2016–2020 · Graduação":"2016–2020 · Grado","Em andamento · Especialização":"En curso · Especialización"}};
 
-        // E-mail institucional com alerta
-        var emailLink = document.getElementById('emailNew');
-        if (emailLink) {
-            emailLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert("E-mail institucional: raique.correia@ulife.com.br (para correspondência acadêmica).");
-            });
-        }
-    })();
+Object.assign(translations.en, {
+"Universidade Salvador · UNIFACS":"Salvador University · UNIFACS","Universidade Salvador (UNIFACS)":"Salvador University (UNIFACS)","Salvador, Bahia · Brasil":"Salvador, Bahia · Brazil","Doutorado em Desenvolvimento Regional e Urbano":"Doctorate in Regional and Urban Development","Doutorado sanduíche":"Visiting doctoral research stay","Mestrado em Desenvolvimento Regional e Urbano":"Master’s degree in Regional and Urban Development","Especialização em Gestão Social e Políticas Públicas do Patrimônio Cultural":"Specialization in Social Management and Public Policies for Cultural Heritage","Especialização em Direito Eleitoral":"Specialization in Electoral Law","Especialização em Filosofia do Direito e Teoria Geral do Direito":"Specialization in Philosophy of Law and General Theory of Law","Faculdade Inove Educação (I9)":"Inove Educação College (I9)","Prof. Dr. José Euclimar Xavier de Menezes":"Prof. Dr. José Euclimar Xavier de Menezes","Prof. Dr. Roberto Félix Olivares Gutiérrez":"Prof. Dr. Roberto Félix Olivares Gutiérrez","Prof. Dr. José Geraldo de Sousa Junior":"Prof. Dr. José Geraldo de Sousa Junior",
+"Advogado. Coordenador e professor dos Cursos de Direito e Relações Internacionais da Universidade Salvador (UNIFACS). Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH). Doutorando em Desenvolvimento Regional e Urbano pela UNIFACS, com bolsa da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Entre junho de 2025 e junho de 2026, realizou Research Stay (Estancia de Investigación) na Facultad de Derecho da Universidad de Ixtlahuaca CUI (México), com bolsa do Programa de Doutorado Sanduíche no Exterior (PDSE/CAPES). Entre janeiro e abril de 2026, atuou como professor convidado no Instituto de Formación Académica del Centro y Sureste - Universidad INFA (México), ministrando o curso de curta duração \"Formación en Cultura Brasileña y Portugués para Estudiantes Extranjeros\". Mestre em Desenvolvimento Regional e Urbano pela UNIFACS. Especialista em Políticas Públicas e Patrimônio Cultural pela Universidade Federal da Bahia (UFBA). Bacharel em Direito pelo Centro Universitário Social da Bahia (UNISBA). Secretário Editorial da RDE - Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) da UNIFACS. Membro da Equipe Editorial da RIBDH - Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2). Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq) e membro do Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq). Pesquisador Colaborador em projeto vinculado ao Instituto Jurídico Portucalense (IJP) da Universidade Portucalense Infante D. Henrique (UPT, Portugal). Coordenou, em parceria com o Prof. Dr. José Euclimar Xavier de Menezes, o dossiê \"Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade\", publicado na CSOnline - Revista Eletrônica de Ciências Sociais (ISSN 1981-2140, Qualis B1), vinculada ao Programa de Pós-Graduação em Ciências Sociais (PPGCSO) da Universidade Federal de Juiz de Fora (UFJF). Foi roteirista e autor do argumento do documentário \"Projeto CienciArt V - A Cidade pelo Avesso\" (ANCINE CPB n. B25-002217-00000), produção do GPPEC/UNIFACS com financiamento público da Lei Paulo Gustavo (Lei Complementar n. 195/2022), conforme Edital PG02/2023 Produção Audiovisual Web da Secretaria de Cultura do Estado da Bahia (SECULT-BA). Suas linhas de pesquisa e atuação profissional abrangem os seguintes eixos temáticos: Direito Público, Direito Constitucional, Direito Urbanístico e Administrativo, Direitos Humanos e Fundamentais, Metodologia da Pesquisa Jurídica, Patrimônio Cultural e Direitos Culturais.":"Attorney; coordinator and professor in the Law and International Relations programs at Universidade Salvador (UNIFACS). Member of the Executive Committee of the Brazilian Institute of Human Rights (IBDH). PhD candidate in Regional and Urban Development at UNIFACS, supported by a scholarship from CAPES, Brazil’s federal agency for graduate education. From June 2025 to June 2026, he undertook a doctoral research stay at the Faculty of Law of Universidad de Ixtlahuaca CUI, Mexico, funded by the PDSE/CAPES program. From January to April 2026, he was a guest lecturer at Instituto de Formación Académica del Centro y Sureste – Universidad INFA, Mexico, teaching the short course “Training in Brazilian Culture and Portuguese for Foreign Students.” He holds a master’s degree in Regional and Urban Development from UNIFACS, a specialization in Public Policies and Cultural Heritage from the Federal University of Bahia (UFBA), and a Bachelor of Laws from Centro Universitário Social da Bahia (UNISBA). He is Editorial Secretary of RDE – Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), affiliated with UNIFACS’s Graduate Program in Regional and Urban Development (PPDRU), and a member of the editorial team of RIBDH – Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2). He is deputy leader of the Citizenship Policies and Epistemes Research Group (GPPEC/UNIFACS/CNPq) and a member of O Direito Achado na Rua (ODAnR/UnB/CNPq). He collaborates on a project affiliated with the Portucalense Legal Institute (IJP), Portucalense University Infante D. Henrique (UPT), Portugal. With Prof. Dr. José Euclimar Xavier de Menezes, he coordinated the dossier “Human Rights and Political Practices of Citizenship in Contemporary Times,” published in CSOnline – Electronic Journal of Social Sciences (ISSN 1981-2140, Qualis B1), affiliated with the Federal University of Juiz de Fora. He wrote the screenplay and story concept for the documentary “CienciArt V Project – The City Inside Out” (ANCINE CPB no. B25-002217-00000), produced by GPPEC/UNIFACS with public funding under the Paulo Gustavo Law (Complementary Law 195/2022), through the Bahia State Secretariat of Culture’s PG02/2023 Web Audiovisual Production Call. His research and professional interests include Public Law, Constitutional Law, Urban and Administrative Law, Human and Fundamental Rights, Legal Research Methodology, Cultural Heritage, and Cultural Rights.",
+"Estudo comparativo dos impactos de movimentos sociais insurgentes em Salvador (Brasil) e Toluca (México), das práticas contra-hegemônicas de produção do espaço urbano e da efetivação da cidadania por meio da luta pelo direito à cidade, no período de 1970 a 2025.":"Comparative study of the impact of insurgent social movements in Salvador, Brazil, and Toluca, Mexico, examining counter-hegemonic practices in urban space production and the realization of citizenship through struggles for the right to the city from 1970 to 2025.",
+"Secretário Editorial, periódico vinculado ao PPDRU/UNIFACS.":"Editorial Secretary of a journal affiliated with PPDRU/UNIFACS.","Membro da equipe editorial.":"Member of the editorial team.","Pesquisador colaborador em projeto internacional de investigação sobre direitos humanos aplicados.":"Research collaborator in an international project on applied human rights.","Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania; membro do grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).":"Deputy leader of the Citizenship Policies and Epistemes Research Group; member of O Direito Achado na Rua (ODAnR/UnB/CNPq).",
+"Para a relação completa de cursos, consulte o":"For the full list of courses, consult the","Perfil acadêmico · Atualizado em outubro de 2026 ·":"Academic profile · Updated October 2026 ·"
+});
+Object.assign(translations.es, {
+"Universidade Salvador · UNIFACS":"Universidad Salvador · UNIFACS","Universidade Salvador (UNIFACS)":"Universidad Salvador (UNIFACS)","Salvador, Bahia · Brasil":"Salvador, Bahía · Brasil","Doutorado em Desenvolvimento Regional e Urbano":"Doctorado en Desarrollo Regional y Urbano","Doutorado sanduíche":"Estancia doctoral de investigación","Mestrado em Desenvolvimento Regional e Urbano":"Máster en Desarrollo Regional y Urbano","Especialização em Gestão Social e Políticas Públicas do Patrimônio Cultural":"Especialización en Gestión Social y Políticas Públicas del Patrimonio Cultural","Especialização em Direito Eleitoral":"Especialización en Derecho Electoral","Especialização em Filosofia do Direito e Teoria Geral do Direito":"Especialización en Filosofía del Derecho y Teoría General del Derecho","Faculdade Inove Educação (I9)":"Facultad Inove Educação (I9)",
+"Advogado. Coordenador e professor dos Cursos de Direito e Relações Internacionais da Universidade Salvador (UNIFACS). Membro do Comitê Executivo do Instituto Brasileiro de Direitos Humanos (IBDH). Doutorando em Desenvolvimento Regional e Urbano pela UNIFACS, com bolsa da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES). Entre junho de 2025 e junho de 2026, realizou Research Stay (Estancia de Investigación) na Facultad de Derecho da Universidad de Ixtlahuaca CUI (México), com bolsa do Programa de Doutorado Sanduíche no Exterior (PDSE/CAPES). Entre janeiro e abril de 2026, atuou como professor convidado no Instituto de Formación Académica del Centro y Sureste - Universidad INFA (México), ministrando o curso de curta duração \"Formación en Cultura Brasileña y Portugués para Estudiantes Extranjeros\". Mestre em Desenvolvimento Regional e Urbano pela UNIFACS. Especialista em Políticas Públicas e Patrimônio Cultural pela Universidade Federal da Bahia (UFBA). Bacharel em Direito pelo Centro Universitário Social da Bahia (UNISBA). Secretário Editorial da RDE - Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao Programa de Pós-Graduação em Desenvolvimento Regional e Urbano (PPDRU) da UNIFACS. Membro da Equipe Editorial da RIBDH - Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2). Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq) e membro do Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq). Pesquisador Colaborador em projeto vinculado ao Instituto Jurídico Portucalense (IJP) da Universidade Portucalense Infante D. Henrique (UPT, Portugal). Coordenou, em parceria com o Prof. Dr. José Euclimar Xavier de Menezes, o dossiê \"Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade\", publicado na CSOnline - Revista Eletrônica de Ciências Sociais (ISSN 1981-2140, Qualis B1), vinculada ao Programa de Pós-Graduação em Ciências Sociais (PPGCSO) da Universidade Federal de Juiz de Fora (UFJF). Foi roteirista e autor do argumento do documentário \"Projeto CienciArt V - A Cidade pelo Avesso\" (ANCINE CPB n. B25-002217-00000), produção do GPPEC/UNIFACS com financiamento público da Lei Paulo Gustavo (Lei Complementar n. 195/2022), conforme Edital PG02/2023 Produção Audiovisual Web da Secretaria de Cultura do Estado da Bahia (SECULT-BA). Suas linhas de pesquisa e atuação profissional abrangem os seguintes eixos temáticos: Direito Público, Direito Constitucional, Direito Urbanístico e Administrativo, Direitos Humanos e Fundamentais, Metodologia da Pesquisa Jurídica, Patrimônio Cultural e Direitos Culturais.":"Abogado, coordinador y profesor de los programas de Derecho y Relaciones Internacionales de la Universidade Salvador (UNIFACS). Miembro del Comité Ejecutivo del Instituto Brasileño de Derechos Humanos (IBDH). Doctorando en Desarrollo Regional y Urbano en la UNIFACS, con una beca de CAPES, organismo federal brasileño de apoyo a la formación de posgrado. Entre junio de 2025 y junio de 2026, realizó una estancia de investigación doctoral en la Facultad de Derecho de la Universidad de Ixtlahuaca CUI (México), financiada por el programa PDSE/CAPES. Entre enero y abril de 2026, fue profesor invitado en el Instituto de Formación Académica del Centro y Sureste – Universidad INFA (México), donde impartió el curso breve “Formación en Cultura Brasileña y Portugués para Estudiantes Extranjeros”. Tiene una maestría en Desarrollo Regional y Urbano por la UNIFACS, una especialización en Políticas Públicas y Patrimonio Cultural por la Universidad Federal de Bahía (UFBA) y el grado en Derecho por el Centro Universitário Social da Bahia (UNISBA). Es secretario editorial de RDE – Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada al programa de posgrado PPDRU de la UNIFACS, y miembro del equipo editorial de RIBDH – Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2). Es vicedirector del Grupo de Investigación Políticas y Epistemes de la Ciudadanía (GPPEC/UNIFACS/CNPq) y miembro del grupo O Direito Achado na Rua (ODAnR/UnB/CNPq). Colabora en un proyecto del Instituto Jurídico Portucalense (IJP), de la Universidade Portucalense Infante D. Henrique (UPT), Portugal. Junto con el Prof. Dr. José Euclimar Xavier de Menezes, coordinó el dosier “Derechos Humanos y Prácticas Políticas de Ciudadanía en la Contemporaneidad”, publicado en CSOnline – Revista Electrónica de Ciencias Sociales (ISSN 1981-2140, Qualis B1), vinculada a la Universidad Federal de Juiz de Fora. Fue guionista y autor del argumento del documental “Proyecto CienciArt V – La Ciudad al Revés” (ANCINE CPB n.º B25-002217-00000), producido por GPPEC/UNIFACS con financiación pública de la Ley Paulo Gustavo (Ley Complementaria n.º 195/2022), conforme a la convocatoria PG02/2023 de Producción Audiovisual Web de la Secretaría de Cultura del Estado de Bahía (SECULT-BA). Sus líneas de investigación y actuación profesional abarcan Derecho Público, Derecho Constitucional, Derecho Urbanístico y Administrativo, Derechos Humanos y Fundamentales, Metodología de la Investigación Jurídica, Patrimonio Cultural y Derechos Culturales.",
+"Estudo comparativo dos impactos de movimentos sociais insurgentes em Salvador (Brasil) e Toluca (México), das práticas contra-hegemônicas de produção do espaço urbano e da efetivação da cidadania por meio da luta pelo direito à cidade, no período de 1970 a 2025.":"Estudio comparativo de los impactos de los movimientos sociales insurgentes en Salvador (Brasil) y Toluca (México), de las prácticas contrahegemónicas de producción del espacio urbano y de la realización de la ciudadanía mediante la lucha por el derecho a la ciudad, entre 1970 y 2025.",
+"Secretário Editorial, periódico vinculado ao PPDRU/UNIFACS.":"Secretario editorial de una revista vinculada al PPDRU/UNIFACS.","Membro da equipe editorial.":"Miembro del equipo editorial.","Pesquisador colaborador em projeto internacional de investigação sobre direitos humanos aplicados.":"Investigador colaborador en un proyecto internacional sobre derechos humanos aplicados.","Vice-líder do Grupo de Pesquisa Políticas e Epistemes da Cidadania; membro do grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).":"Vicedirector del Grupo de Investigación Políticas y Epistemes de la Ciudadanía; miembro del grupo O Direito Achado na Rua (ODAnR/UnB/CNPq).",
+"Para a relação completa de cursos, consulte o":"Para consultar la lista completa de cursos, visite el","Perfil acadêmico · Atualizado em outubro de 2026 ·":"Perfil académico · Actualizado en octubre de 2026 ·"
+});
+
+Object.assign(translations.en, {"Editorias e periódicos científicos": "Editorial roles and academic journals", "Secretário Editorial": "Editorial Secretary", "Membro da Equipe Editorial": "Editorial Board Member", "Coordenação de dossiê": "Dossier coordination", " — RDE, Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao PPDRU/UNIFACS.": " — RDE, Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), affiliated with PPDRU/UNIFACS.", " — RIBDH, Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2).": " — RIBDH, Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2).", " — “Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade”, com o Prof. Dr. José Euclimar Xavier de Menezes, publicado na CSOnline/UFJF (ISSN 1981-2140, Qualis B1).": " — “Human Rights and Political Practices of Citizenship in Contemporary Times,” co-edited with Prof. Dr. José Euclimar Xavier de Menezes and published in CSOnline/UFJF (ISSN 1981-2140, Qualis B1).", "Grupos de pesquisa": "Research groups", "Vice-líder": "Deputy leader", " — Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq).": " — Citizenship Policies and Epistemes Research Group (GPPEC/UNIFACS/CNPq).", "Membro": "Member", " — Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq).": " — O Direito Achado na Rua Research Group (ODAnR/UnB/CNPq).", "Congressos e eventos internacionais": "International conferences and events", "Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos e Cidadania, Universidade Portucalense Infante D. Henrique (Portugal).": "Member of the organizing committees for the International Symposia on Human Rights and Citizenship, Universidade Portucalense Infante D. Henrique (Portugal).", "Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos Aplicados, Universidad de Salamanca (Espanha).": "Member of the organizing committees for the International Symposia on Applied Human Rights, Universidad de Salamanca (Spain).", "Bolsas, prêmios e distinções": "Scholarships, awards, and distinctions", "Bolsa CAPES/PROSUP no mestrado (2021–2023) e doutorado (2023–atual).": "CAPES/PROSUP scholarship for the master’s degree (2021–2023) and doctoral studies (2023–present).", "Bolsa CAPES/PDSE para estágio de pesquisa no exterior.": "CAPES/PDSE scholarship for an overseas research stay.", "1º lugar no Concurso de Dissertação de Mestrado da Rede de Pesquisa em Direito da Cidade, VI Congresso Nacional de Direito da Cidade.": "First place in the Master’s Dissertation Competition of the Urban Law Research Network, 6th National Congress on Urban Law.", "Prêmio de Melhor Apresentação em formato banner, XVII Semana Acadêmica do Centro Universitário Social da Bahia.": "Best Poster Presentation Award, 17th Academic Week of Centro Universitário Social da Bahia.", "Projeto de Pesquisa de Destaque nas XVI e XV Jornadas Científicas da Faculdade Social da Bahia.": "Outstanding Research Project at the 16th and 15th Scientific Conferences of Faculdade Social da Bahia.", "Formação complementar selecionada": "Selected additional training", "Formação urbana e condicionantes da produção do espaço no Brasil — aluno especial, PPGAU/FAUUSP (2021.2).": "Urban development and the conditions shaping space production in Brazil — non-degree student, PPGAU/FAUUSP (2021, second semester).", "Cidade e Espaço Urbano — aluno especial, POSGEO/UFBA (2022.1).": "City and Urban Space — non-degree student, POSGEO/UFBA (2022, first semester).", "Direito à Cidade: Participação, Lutas Políticas e Democracia — aluno extensionista, IPOL/UnB (2022.1).": "Right to the City: Participation, Political Struggles, and Democracy — extension student, IPOL/UnB (2022, first semester).", "Formação docente para professores de Direito — FGV (2021).": "Teacher training for Law professors — FGV (2021).", "Panorama Teórico dos Direitos Humanos no Brasil — ENAP (2022).": "Theoretical Overview of Human Rights in Brazil — ENAP (2022).", "Para a relação completa de cursos, consulte o ": "For the complete list of courses, consult the ", "Currículo Lattes": "Lattes CV", "Desenvolvimento Regional e Urbano": "Regional and Urban Development", "Universidade Salvador (UNIFACS), Brasil · Bolsa CAPES/PROSUP.": "Universidade Salvador (UNIFACS), Brazil · CAPES/PROSUP scholarship.", "Pesquisa:": "Research project:", "Orientador: Prof. Dr. José Euclimar Xavier de Menezes.": "Advisor: Prof. Dr. José Euclimar Xavier de Menezes.", "Junho de 2025 – junho de 2026 · Doutorado sanduíche / Research Stay": "June 2025 – June 2026 · Visiting doctoral research stay", "Facultad de Derecho · México · Bolsa PDSE/CAPES.": "Faculty of Law · Mexico · PDSE/CAPES scholarship.", "Research Stay realizado entre junho de 2025 e junho de 2026, como etapa internacional do doutorado em Desenvolvimento Regional e Urbano da UNIFACS.": "Doctoral research stay conducted from June 2025 to June 2026 as the international component of UNIFACS’s PhD program in Regional and Urban Development.", "Projeto de pesquisa:": "Research project:", "Supervisor no México:": "Supervisor in Mexico:", "Orientador no Brasil:": "Advisor in Brazil:", "Dissertação:": "Master’s dissertation:", "Gestão Social e Políticas Públicas do Patrimônio Cultural": "Social Management and Public Policies for Cultural Heritage", "Universidade Federal da Bahia (UFBA), Brasil. Trabalho:": "Federal University of Bahia (UFBA), Brazil. Thesis:", "Direito Eleitoral": "Electoral Law", "Faculdade Inove Educação (I9), Brasil.": "Faculdade Inove Educação (I9), Brazil.", "Filosofia do Direito e Teoria Geral do Direito": "Philosophy of Law and General Theory of Law", "Centro Universitário Social da Bahia (UNISBA), Brasil. Trabalho:": "Centro Universitário Social da Bahia (UNISBA), Brazil. Thesis:", "Bachelor of Laws": "Bachelor of Laws", "Bolsa PDSE/CAPES.": "PDSE/CAPES scholarship."});
+Object.assign(translations.es, {"Editorias e periódicos científicos": "Responsabilidades editoriales y revistas científicas", "Secretário Editorial": "Secretario editorial", "Membro da Equipe Editorial": "Miembro del equipo editorial", "Coordenação de dossiê": "Coordinación de dosier", " — RDE, Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada ao PPDRU/UNIFACS.": " — RDE, Revista de Desenvolvimento Econômico (ISSN 2178-8022, Qualis A4), vinculada al PPDRU/UNIFACS.", " — RIBDH, Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2).": " — RIBDH, Revista do Instituto Brasileiro de Direitos Humanos (ISSN 1677-1419, Qualis B2).", " — “Direitos Humanos e Práticas Políticas de Cidadania na Contemporaneidade”, com o Prof. Dr. José Euclimar Xavier de Menezes, publicado na CSOnline/UFJF (ISSN 1981-2140, Qualis B1).": " — “Derechos humanos y prácticas políticas de ciudadanía en la contemporaneidad”, coordinado junto con el Prof. Dr. José Euclimar Xavier de Menezes y publicado en CSOnline/UFJF (ISSN 1981-2140, Qualis B1).", "Grupos de pesquisa": "Grupos de investigación", "Vice-líder": "Vicedirector", " — Grupo de Pesquisa Políticas e Epistemes da Cidadania (GPPEC/UNIFACS/CNPq).": " — Grupo de Investigación Políticas y Epistemes de la Ciudadanía (GPPEC/UNIFACS/CNPq).", "Membro": "Miembro", " — Grupo de Pesquisa O Direito Achado na Rua (ODAnR/UnB/CNPq).": " — Grupo de Investigación O Direito Achado na Rua (ODAnR/UnB/CNPq).", "Congressos e eventos internacionais": "Congresos y eventos internacionales", "Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos e Cidadania, Universidade Portucalense Infante D. Henrique (Portugal).": "Miembro de los comités organizadores de los Simposios Internacionales de Derechos Humanos y Ciudadanía, Universidade Portucalense Infante D. Henrique (Portugal).", "Comissões organizadoras dos Simpósios Internacionais em Direitos Humanos Aplicados, Universidad de Salamanca (Espanha).": "Miembro de los comités organizadores de los Simposios Internacionales de Derechos Humanos Aplicados, Universidad de Salamanca (España).", "Bolsas, prêmios e distinções": "Becas, premios y distinciones", "Bolsa CAPES/PROSUP no mestrado (2021–2023) e doutorado (2023–atual).": "Beca CAPES/PROSUP durante la maestría (2021–2023) y el doctorado (2023–actualidad).", "Bolsa CAPES/PDSE para estágio de pesquisa no exterior.": "Beca CAPES/PDSE para una estancia de investigación en el extranjero.", "1º lugar no Concurso de Dissertação de Mestrado da Rede de Pesquisa em Direito da Cidade, VI Congresso Nacional de Direito da Cidade.": "Primer lugar en el Concurso de Tesis de Maestría de la Red de Investigación en Derecho de la Ciudad, VI Congreso Nacional de Derecho de la Ciudad.", "Prêmio de Melhor Apresentação em formato banner, XVII Semana Acadêmica do Centro Universitário Social da Bahia.": "Premio a la mejor presentación en formato póster, XVII Semana Académica del Centro Universitário Social da Bahia.", "Projeto de Pesquisa de Destaque nas XVI e XV Jornadas Científicas da Faculdade Social da Bahia.": "Proyecto de investigación destacado en las XVI y XV Jornadas Científicas de la Faculdade Social da Bahia.", "Formação complementar selecionada": "Formación complementaria seleccionada", "Formação urbana e condicionantes da produção do espaço no Brasil — aluno especial, PPGAU/FAUUSP (2021.2).": "Formación urbana y condicionantes de la producción del espacio en Brasil — estudiante no regular, PPGAU/FAUUSP (segundo semestre de 2021).", "Cidade e Espaço Urbano — aluno especial, POSGEO/UFBA (2022.1).": "Ciudad y espacio urbano — estudiante no regular, POSGEO/UFBA (primer semestre de 2022).", "Direito à Cidade: Participação, Lutas Políticas e Democracia — aluno extensionista, IPOL/UnB (2022.1).": "Derecho a la ciudad: participación, luchas políticas y democracia — estudiante de extensión, IPOL/UnB (primer semestre de 2022).", "Formação docente para professores de Direito — FGV (2021).": "Formación docente para profesores de Derecho — FGV (2021).", "Panorama Teórico dos Direitos Humanos no Brasil — ENAP (2022).": "Panorama teórico de los derechos humanos en Brasil — ENAP (2022).", "Para a relação completa de cursos, consulte o ": "Para consultar la lista completa de cursos, visite el ", "Currículo Lattes": "CV Lattes", "Desenvolvimento Regional e Urbano": "Desarrollo Regional y Urbano", "Universidade Salvador (UNIFACS), Brasil · Bolsa CAPES/PROSUP.": "Universidade Salvador (UNIFACS), Brasil · Beca CAPES/PROSUP.", "Pesquisa:": "Investigación:", "Orientador: Prof. Dr. José Euclimar Xavier de Menezes.": "Director de tesis: Prof. Dr. José Euclimar Xavier de Menezes.", "Junho de 2025 – junho de 2026 · Doutorado sanduíche / Research Stay": "Junio de 2025 – junio de 2026 · Estancia doctoral de investigación", "Facultad de Derecho · México · Bolsa PDSE/CAPES.": "Facultad de Derecho · México · Beca PDSE/CAPES.", "Research Stay realizado entre junho de 2025 e junho de 2026, como etapa internacional do doutorado em Desenvolvimento Regional e Urbano da UNIFACS.": "Estancia de investigación realizada entre junio de 2025 y junio de 2026 como etapa internacional del doctorado en Desarrollo Regional y Urbano de la UNIFACS.", "Projeto de pesquisa:": "Proyecto de investigación:", "Supervisor no México:": "Supervisor en México:", "Orientador no Brasil:": "Director de tesis en Brasil:", "Dissertação:": "Disertación de maestría:", "Gestão Social e Políticas Públicas do Patrimônio Cultural": "Gestión Social y Políticas Públicas del Patrimonio Cultural", "Universidade Federal da Bahia (UFBA), Brasil. Trabalho:": "Universidade Federal da Bahia (UFBA), Brasil. Trabajo:", "Direito Eleitoral": "Derecho Electoral", "Faculdade Inove Educação (I9), Brasil.": "Faculdade Inove Educação (I9), Brasil.", "Filosofia do Direito e Teoria Geral do Direito": "Filosofía del Derecho y Teoría General del Derecho", "Centro Universitário Social da Bahia (UNISBA), Brasil. Trabalho:": "Centro Universitário Social da Bahia (UNISBA), Brasil. Trabajo:"});
+
+let originalNodes = new Map();
+function rememberText(){
+ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+ let n; while(n=walker.nextNode()){if(n.nodeValue.trim()) originalNodes.set(n,n.nodeValue);}
+}
+function setLanguage(lang){
+ const dict=translations[lang]||{};
+ originalNodes.forEach((original,node)=>{
+  const t=original.trim();
+  if(dict[t]){const i=original.indexOf(t);node.nodeValue=original.slice(0,i)+dict[t]+original.slice(i+t.length);}
+  else node.nodeValue=original;
+ });
+ document.documentElement.lang=lang==='en'?'en':(lang==='es'?'es':'pt-BR');
+ document.title=lang==='en'?'Raique Lucas de Jesus Correia — Academic Profile':(lang==='es'?'Raique Lucas de Jesus Correia — Perfil académico':'Raique Lucas de Jesus Correia — Perfil acadêmico');
+ document.querySelectorAll('.language-btn').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ rememberText();
+ document.querySelectorAll('.language-btn').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.lang)));
+});
 </script>
 </body>
 </html>
